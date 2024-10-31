@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 from src. website.models import Technology, Skill
 
 
@@ -17,9 +18,11 @@ class ServiceCategory(models.Model):
 class Service(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
+    content = HTMLField(blank=True, null=True)
     category = models.ForeignKey(ServiceCategory, related_name='services',
                                  on_delete=models.CASCADE)
     thumbnail_image = models.ImageField(upload_to='service_thumbnails/', blank=True, null=True)
+    icon = models.ImageField(upload_to='service_thumbnails/icons/', blank=True, null=True, help_text="A small icon: avaiable at FontAwesome")
     is_active = models.BooleanField(default=True)
     skills = models.ManyToManyField(Skill, related_name='services', blank=True)
     technologies = models.ManyToManyField(Technology, related_name='services',

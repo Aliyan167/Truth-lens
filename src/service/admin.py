@@ -17,7 +17,6 @@ class ServiceInline(admin.TabularInline):
 @admin.register(ServiceCategory)
 class ServiceCategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
-    inlines = [ServiceInline]
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):

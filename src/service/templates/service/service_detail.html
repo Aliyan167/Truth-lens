@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="breadcumb-wrapper" data-bg-src="{% static 'assets/img/bg/breadcumb-bg.jpg' %}">
+    <div class="container">
+        <div class="breadcumb-content"><h1 class="breadcumb-title">Services Details</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>Services Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="space-top space-extra-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-8">
+                <div class="page-single">
+                    <div class="page-img"><img src="{{ object.thumbnail_image.url }}"
+                                               alt="Service Image"></div>
+                    <div class="page-content"><h2 class="h3 page-title">{{ object.title }}</h2>
+                        <p>{{ object.description }}</p>
+
+                        <div class="row">
+                            <div class="col-md-12 mb-30">
+                                  {{ object.content|safe }}
+                            </div>
+
+                        </div>
+
+                        <h3 class="h4 mb-20">Benefits With Our Service</h3>
+                        <div class="service-feature-wrap">
+                            <div class="service-feature">
+                                <div class="service-feature_icon"><img
+                                        src="{% static 'assets/img/icon/service_feature_1.svg' %}" alt="icon"></div>
+                                <div class="media-body"><h4 class="service-feature_title">Flexible Solutions</h4>
+                                    <p class="service-feature_text">Completely grow multimedia based content before
+                                        global scenarios.</p></div>
+                            </div>
+                            <div class="service-feature">
+                                <div class="service-feature_icon"><img
+                                        src="{% static 'assets/img/icon/service_feature_2.svg' %}" alt="icon"></div>
+                                <div class="media-body"><h4 class="service-feature_title">24/7 Unlimited Support</h4>
+                                    <p class="service-feature_text">Completely grow multimedia based content before
+                                        global scenarios.</p></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-lg-4">
+                <aside class="sidebar-area">
+                    <div class="widget widget_nav_menu"><h3 class="widget_title">All Services</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                {% for object in services %}
+                                <li><a href="{% url 'service:detail' object.pk %}">{{ object.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="widget widget_banner" data-bg-src="{% static 'assets/img/bg/widget_banner.jpg' %}">
+                        <div class="widget-banner"><span class="text">CONTACT US NOW</span>
+                            <h2 class="title">You Need Help?</h2><a href="{% url 'website:contact-us' %}" class="th-btn style3">GET A
+                                QUOTE<i class="fas fa-arrow-right ms-2"></i></a></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

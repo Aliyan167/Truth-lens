@@ -7,7 +7,7 @@ from core.settings import MEDIA_ROOT, STATIC_ROOT
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
-    path('', include('src.website.urls')),
+    path('', include('src.urls')),
 ]
 
 

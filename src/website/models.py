@@ -55,3 +55,36 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Testimonials(models.Model):
+    name = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='team/')
+    rating = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Testimonial"
+        verbose_name_plural = "Testimonials"
+
+
+class ContactUs(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    phone = models.CharField(max_length=100)
+    budget = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Contact Us"
+        verbose_name_plural = "Contact Us"
+
+

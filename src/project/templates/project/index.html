@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="breadcumb-wrapper" data-bg-src="{% static 'assets/img/bg/breadcumb-bg.jpg' %}">
+    <div class="container">
+        <div class="breadcumb-content"><h1 class="breadcumb-title">Our Projects</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'website:index' %}">Home</a></li>
+                <li>Our Projects</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="space">
+    <div class="container">
+        <div class="row gy-4">
+            {% for object in projects %}
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card">
+                    <div class="project-img"><img src="{{ object.thumbnail_image.url }}"
+                                                  alt="project image"></div>
+                    <div class="project-content-wrap">
+                        <div class="project-content">
+                            <div class="box-particle" id="project-p1"></div>
+                            <h3 class="box-title"><a href="{% url 'project:detail' object.pk %}">{{ object.title }}</a></h3>
+                            <p class="project-subtitle">{{ object.description|slice:20 }}</p><a href="{% url 'project:detail' object.pk %}"
+                                                                         class="icon-btn "><i
+                                class="far fa-plus"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="shape-mockup" data-top="0%" data-right="0%"><img src="{% static 'assets/img/shape/tech_shape_1.png' %}"
+                                                                 alt="shape"></div>
+    <div class="shape-mockup" data-bottom="0%" data-left="0%"><img
+            src="{% static 'assets/img/shape/tech_shape_2.png' %}" alt="shape"></div>
+</section>
+{% endblock %}

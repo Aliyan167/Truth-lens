@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="breadcumb-wrapper" data-bg-src="{% static 'assets/img/bg/breadcumb-bg.jpg' %}">
+    <div class="container">
+        <div class="breadcumb-content"><h1 class="breadcumb-title">Contact Us</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'website:index' %}">Home</a></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="space">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-xl-4 col-md-6">
+                <div class="contact-info">
+                    <div class="contact-info_icon"><i class="fas fa-location-dot"></i></div>
+                    <div class="media-body"><h4 class="box-title">Our Office Address</h4><span
+                            class="contact-info_text">Burnsville, MN 55337 Streat,<br>United States</span></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="contact-info">
+                    <div class="contact-info_icon"><i class="fas fa-phone"></i></div>
+                    <div class="media-body"><h4 class="box-title">Call Us Anytime</h4><span class="contact-info_text"><a
+                            href="tel:+65485965789">(+65) - 48596 - 5789</a> <a
+                            href="tel:+65485965789">+65-48596-5789</a></span></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="contact-info">
+                    <div class="contact-info_icon"><i class="fas fa-envelope"></i></div>
+                    <div class="media-body"><h4 class="box-title">Send An Email</h4><span class="contact-info_text"><a
+                            href="mailto:info.example@gmail.com">info.example@gmail.com</a> <a
+                            href="mailto:info@webteck.com">info@webteck.com</a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="overflow-hidden mb-20 ">
+    <div class="container th-container4">
+        <div class="appointment-area th-radius3 position-relative overflow-hidden"
+             data-bg-src="{% static 'assets/img/bg/appointment_bg_3.jpg' %}">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="title-area mb-40 text-xl-start"><span class="sub-title sub-title3 style1 text-white">Work With Us</span>
+                        <h2 class="sec-title text-white">We are ready to work for your projects</h2>
+                        <p class="sec-desc text-white">Phasellus parturient est cum dictum habitant eros fames, enim
+                            curabitur convallis arcu dictumst fermentum cubilia leo maecenas in pellentesque.</p></div>
+                    <div class="feature-wrapper style4">
+                        <div class="feature-icon"><a href="tel:+2583258235"><i class="fa-solid fa-phone"></i></a></div>
+                        <div class="media-body"><p class="header-info_link"><a href="tel:+2583258235">Call Us: 258-3258
+                            235</a></p><span class="header-info_label">For any question</span></div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="appointment-area-wrapper">
+                        <form method="POST" class="appointment-form2 input-smoke">
+                            {%  csrf_token %}
+                            {{ contact_form }}
+                            <button type="submit" class="th-btn style3">Get Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="map-sec">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sThemeholy!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd"
+            allowfullscreen="" loading="lazy"></iframe>
+</div>
+{% endblock %}

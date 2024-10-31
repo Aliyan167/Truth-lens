@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="breadcumb-wrapper" data-bg-src="{% static 'assets/img/bg/breadcumb-bg.jpg' %}">
+    <div class="container">
+        <div class="breadcumb-content"><h1 class="breadcumb-title">Project Details</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'website:index' %}">Home</a></li>
+                <li>Project Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="space-top space-extra-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-8">
+                <div class="page-single">
+                    <div class="page-img"><img src="{{ object.poster_image.url }}"
+                                               alt="Project Image"></div>
+                    <div class="page-content"><h2 class="h3 page-title">{{ object.title }}</h2>
+                        <p class="">{{ object.description }}</p>
+                       <div class="row">
+                           <div class="col-md-12">
+                               {{ object.content|safe }}
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-lg-4">
+                <aside class="sidebar-area">
+                    <div class="widget widget_info"><h3 class="widget_title">Project Information</h3>
+                        <div class="project-info-list">
+                            <div class="contact-feature">
+                                <div class="icon-btn"><i class="fa-solid fa-user"></i></div>
+                                <div class="media-body"><p class="contact-feature_label">Clients:</p><b>{{ object.client }}</b></div>
+                            </div>
+                            <div class="contact-feature">
+                                <div class="icon-btn"><i class="fa-solid fa-folder-open"></i></div>
+                                <div class="media-body"><p class="contact-feature_label">Category:</p>{{ object.category.name }}</div>
+                            </div>
+                            <div class="contact-feature">
+                                <div class="icon-btn"><i class="fa-solid fa-calendar-days"></i></div>
+                                <div class="media-body"><p class="contact-feature_label">Date</p>{{ object.start_date }}</div>
+                            </div>
+                            <div class="contact-feature">
+                                <div class="icon-btn"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="media-body"><p class="contact-feature_label">Address:</p>{{ object.address }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget_banner" data-bg-src="{% static 'assets/img/bg/widget_banner.jpg' %}">
+                        <div class="widget-banner"><span class="text">CONTACT US NOW</span>
+                            <h2 class="title">You Need Help?</h2><a href="{% url 'website:contact-us' %}" class="th-btn style3">GET A
+                                QUOTE<i class="fas fa-arrow-right ms-2"></i></a></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

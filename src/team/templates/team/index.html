@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="breadcumb-wrapper" data-bg-src="{% static 'assets/img/bg/breadcumb-bg.jpg' %}">
+    <div class="container">
+        <div class="breadcumb-content"><h1 class="breadcumb-title">Our Team</h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'website:index' %}">Home</a></li>
+                <li>Our Team</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="space-top">
+    <div class="container">
+        <div class="row gy-40 align-items-center">
+            <div class="col-xl-5">
+                <div class="team-featured-img"><img src="{% static 'assets/img/team/team_featured.jpg' %}" alt="Team">
+                </div>
+            </div>
+            <div class="col-xl-7">
+                <div class="team-featured"><h2 class="team-title">{{ ceo.name }}</h2>
+                    <p class="team-desig">CEO & Founder</p>
+                    <p class="team-bio">{{ ceo.description|slice:500 }}</p>
+                    <div class="team-contact-wrap">
+                        <div class="team-contact">
+                            <div class="icon-btn"><i class="fa-solid fa-phone"></i></div>
+                            <div class="media-body"><h6 class="team-contact_label">Phone Number</h6><a
+                                    class="team-contact_link" href="tel:+19356542587">{{ ceo.phonenumber|slice:15 }}</a></div>
+                        </div>
+                        <div class="team-contact">
+                            <div class="icon-btn"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="media-body"><h6 class="team-contact_label">Email Address</h6><a
+                                    class="team-contact_link" href="mailto:info@rachna.com">{{ ceo.email }}</a></div>
+                        </div>
+                        <div class="team-contact">
+                            <div class="icon-btn"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="media-body"><h6 class="team-contact_label">Location</h6><span
+                                    class="team-contact_link">{{ ceo.location }}</span></div>
+                        </div>
+                    </div>
+                    <a href="{% url 'website:contact-us' %}" class="th-btn">MAKE AN APPOINTMENT<i
+                            class="fa-regular fa-arrow-right ms-2"></i></a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="space">
+    <div class="container">
+        <div class="title-area text-center"><span class="sub-title"><div class="icon-masking me-2"><span
+                class="mask-icon" data-mask-src="{% static 'assets/img/theme-img/title_shape_1.svg' %}"></span> <img
+                src="{% static 'assets/img/theme-img/title_shape_1.svg' %}" alt="shape"></div>ALL MEMBERS</span>
+            <h2 class="sec-title">See Our Skilled Expert <span class="text-theme">Team</span></h2></div>
+        <div class="row gy-40">
+            {% for object in team_members %}
+            <div class="col-lg-3 col-md-6">
+                <div class="th-team team-card">
+                    <div class="team-img"><img src="{{ object.image.url }}" alt="Team"></div>
+                    <div class="team-content">
+                        <div class="box-particle" id="team-p1"></div>
+                        <div class="team-social">
+                            <a target="_blank" href="{{ object.facebook }}"><i
+                                class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" href="{{ object.twitter }}"><i
+                                class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="{{ object.instagram }}"><i
+                                class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="{{ object.linkedin }}"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <h3 class="box-title"><a >{{ object.name }}</a></h3>
+                        <span class="team-desig">{{ object.rank }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

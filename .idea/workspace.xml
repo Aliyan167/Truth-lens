@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3081c221-4647-454a-89a5-56a4c52f824e" name="Changes" comment="" />
+    <list default="true" id="3081c221-4647-454a-89a5-56a4c52f824e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/company-website.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/templates/project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/templates/service/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team/templates/team/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/website/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/website/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/templates/website/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/templates/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/website/templates/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/website/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,25 +52,31 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2oCy0boONCJcNvolsfYXQuj3kTw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/gwtwm/Downloads/company-website",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gwtwm/Downloads/company-website&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gwtwm\Downloads\company-website\templates" />
       <recent name="C:\Users\gwtwm\Downloads\company-website\src" />
     </key>
   </component>

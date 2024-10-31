@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import (
-     Technology, Skill, Tag
+     Technology, Skill, Tag, Testimonials, ContactUs
 )
 
 
@@ -15,3 +15,7 @@ class TechnologyAdmin(admin.ModelAdmin):
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
     list_display = ('name', 'proficiency_level', 'created_at')
+
+
+admin.site.register(Testimonials)
+admin.site.register(ContactUs)
