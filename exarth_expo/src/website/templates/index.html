@@ -1,0 +1,930 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--=====Mobile header start=======-->
+<div class="mobile-header d-block d-lg-none ">
+    <div class="container-fluid">
+        <div class="col-12">
+            <div class="mobile-header-elements">
+                <div class="mobile-logo">
+                    <a href="index1.html"><img src="{% static 'assets/img/logo/header-logo1.png' %}" alt=""></a>
+                </div>
+                <div class="mobile-nav-icon">
+                    <i class="fa-duotone fa-bars-staggered"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-sidebar d-block d-lg-none">
+    <div class="logo-m">
+        <a href="index-2.html"><img src="{% static 'assets/img/logo/header3-logo.png' %}" alt=""></a>
+    </div>
+    <div class="menu-close">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="mobile-nav">
+
+        <ul>
+            <li class="has-dropdown"><a href="#">Home </a>
+                <ul class="sub-menu">
+                    <li class="has-dropdown has-dropdown1"><a href="#">Multipage</a>
+                        <ul class="sub-menu">
+                            <li><a href="index-2.html">Home 1</a></li>
+                            <li><a href="index2.html">Home 2</a></li>
+                            <li><a href="index3.html">Home 3</a></li>
+                            <li><a href="index4.html">Home 4</a></li>
+                            <li><a href="index5.html">Home 5</a></li>
+                            <li><a href="index6.html">Home 6</a></li>
+                            <li><a href="index7.html">Home 7</a></li>
+                            <li><a href="index8.html">Home 8</a></li>
+                            <li><a href="index9.html">Home 9</a></li>
+                            <li><a href="index10.html">Home 10</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown has-dropdown1"><a href="#">Landing Page</a>
+                        <ul class="sub-menu">
+                            <li><a href="single-index1.html">Home 1</a></li>
+                            <li><a href="single-index2.html">Home 2</a></li>
+                            <li><a href="single-index3.html">Home 3</a></li>
+                            <li><a href="single-index4.html">Home 4 </a></li>
+                            <li><a href="single-index5.html">Home 5 </a></li>
+                            <li><a href="single-index6.html">Home 6 </a></li>
+                            <li><a href="single-index7.html">Home 7 </a></li>
+                            <li><a href="single-index8.html">Home 8 </a></li>
+                            <li><a href="single-index9.html">Home 9 </a></li>
+                            <li><a href="single-index10.html">Home 10 </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="has-dropdown"><a href="#">Service</a>
+                <ul class="sub-menu">
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="service-details-left.html">Service Left</a></li>
+                    <li><a href="service-details-right.html">Service Right</a></li>
+                    <li><a href="service-details.html">Service Details</a></li>
+                </ul>
+            </li>
+
+            <li class="has-dropdown"><a href="#">Pages</a>
+                <ul class="sub-menu">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                    <li><a href="error.html">404</a></li>
+                </ul>
+            </li>
+
+            <li class="has-dropdown"><a href="#">Blog</a>
+                <ul class="sub-menu">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
+                    <li><a href="blog-details-left.html">Details Left</a></li>
+                    <li><a href="blog-details-right.html">Details Right</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+
+            <li class="has-dropdown"><a href="#">Project</a>
+                <ul class="sub-menu">
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="project-details-left.html">Project Left</a></li>
+                    <li><a href="project-details-right.html">Project Right</a></li>
+                    <li><a href="project-details.html">Project Details</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <div class="mobile-button">
+            <a class="menu-btn2" href="service.html">Learn More <span><i class="fa-solid fa-arrow-right"></i></span></a>
+        </div>
+
+        <div class="single-footer-items">
+            <h3>Contact Us</h3>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <img src="{% static 'assets/img/icons/footer1-icon1.png' %}" alt="">
+                </div>
+                <div class="pera">
+                    <a href="tel:0500222333">0500 222 333</a>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <img src="{% static 'assets/img/icons/footer1-icon2.png' %}" alt="">
+                </div>
+                <div class="pera">
+                    <a href="tel:0356588547">03 5658 8547</a>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <img src="{% static 'assets/img/icons/footer1-icon3.png' %}" alt="">
+                </div>
+                <div class="pera">
+                    <a href="mailto:admin@techxen.org">admin@techxen.org</a>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <div class="icon">
+                    <img src="{% static 'assets/img/icons/footer1-icon4.png' %}" alt="">
+                </div>
+                <div class="pera">
+                    <a href="mailto:admin@techxen.org">www.techxen.org</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-infos">
+            <h3>Our Location</h3>
+            <ul class="social-icon">
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!--=====Mobile header end=======-->
+
+<!--=====HERO AREA START=======-->
+
+<div class="hero1"
+     style="background-image: url(assets/img/bg/hero1-bg.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="main-headding">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}"
+                            alt=""> TechXen Technology & It Solution</span>
+                    <h1 class="title tg-element-title">Transform Your Business With Next Generation <span class="after">IT Solutions</span>
+                    </h1>
+                    <div class="space16"></div>
+                    <p>Welcome to TechXen where we specialise in delivering tailored technology and IT solutions
+                        designed to propel your business forward. From streamlining operations to and driving
+                        growth.</p>
+
+                    <div class="space30"></div>
+                    <div class="buttons">
+                        <a class="theme-btn1" href="contact.html">Get Started Now <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                        <a class="play-btn" href="https://www.youtube.com/watch?v=kcfs1-ryKWE"><span><i
+                                class="fa-regular fa-play"></i></span> Watch Demo Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="hero1-all-images">
+                    <div class="image1 ">
+                        <img src="{% static 'assets/img/hero/hero1-image1.png' %}" alt="">
+                    </div>
+                    <div class="image2 reveal">
+                        <img src="{% static 'assets/img/hero/hero1-image2.png' %}" alt="">
+                    </div>
+                    <div class="image3 shape-animaiton3">
+                        <img src="{% static 'assets/img/hero/hero1-image3.png' %}" alt="">
+                    </div>
+                    <div class="image4 shape-animaiton3">
+                        <img src="{% static 'assets/img/hero/hero1-image4.png' %}" alt="">
+                    </div>
+                    <div class="shape1">
+                        <img src="{% static 'assets/img/shapes/header1-shape1.png' %}" alt="">
+                    </div>
+                    <div class="shape2">
+                        <img src="{% static 'assets/img/shapes/header1-shape2.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====HERO AREA END=======-->
+
+<!--=====HERO BOTTOM AREA START=======-->
+
+
+<div class="">
+    <div class="container">
+        <div class="row hero-bottom-area">
+            <div class="col-lg-3">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/hero-bottom-icon1.png' %}" alt="">
+                    </div>
+                    <div class="headding">
+                        <h5>4x Award Wining</h5>
+                        <p>Always ready to support</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/hero-bottom-icon2.png' %}" alt="">
+                    </div>
+                    <div class="headding">
+                        <h5>2.5k Case Solved</h5>
+                        <p>It Solution case solved</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/hero-bottom-icon3.png' %}" alt="">
+                    </div>
+                    <div class="headding">
+                        <h5>150k Optimisation</h5>
+                        <p>Keywords into online</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/hero-bottom-icon4.png' %}" alt="">
+                    </div>
+                    <div class="headding">
+                        <h5>4x Award Wining</h5>
+                        <p>Always ready to support</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====HERO BOTTOM AREA END=======-->
+
+
+<!--=====ABOUT AREA START=======-->
+
+<div class="about1 sp">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <div class="image1 reveal">
+                        <img src="{% static 'assets/img/about/about1-img1.png' %}" alt="">
+                    </div>
+                    <div class="image2 reveal image-anime">
+                        <img src="{% static 'assets/img/about/about1-img2.png' %}" alt="">
+                    </div>
+                    <div class="icon-box">
+                        <img src="{% static 'assets/img/icons/about1-shape-icon.png' %}" alt="">
+                        <h4>24/7 Support</h4>
+                        <p>TechXen Technology & It Solution</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> About Our Company</span>
+                    <h2 class="title tg-element-title">Discover Our Story Empowering Business Through Innovation</h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-left" data-aos-duration="800">TechXen pioneering force in the realm of technology
+                        and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age.
+                        Our approach is rooted in collaboration, transparency, and a relentless pursuit of excellence.
+                        We believe that by staying ahead of the curve and embracing change, we can help our clients stay
+                        ahead of competition.</p>
+
+                    <ul class="list" data-aos="fade-left" data-aos-duration="1100">
+                        <li><span><i class="fa-solid fa-check"></i></span> Dramatically re-engineer value added IT
+                            system.
+                        </li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Highlight any unique selling points or
+                            differentiators.
+                        </li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Incorporate visuals such as team photos
+                            shots.
+                        </li>
+                    </ul>
+                    <div class="space30"></div>
+                    <div class="" data-aos="fade-left" data-aos-duration="900">
+                        <a class="theme-btn1" href="about.html">Discover More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====ABOUT AREA END=======-->
+
+<!--=====SERVICE AREA START=======-->
+
+<div class="service sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Our Services</span>
+                    <h2 class="title tg-element-title">Empower Your Business With Our Comprehensive Technology & IT
+                        Solutions</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="700">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/service-icon1.png' %}" alt="">
+                    </div>
+                    <div class="heading1">
+                        <h4><a href="service-details.html">Cloud Computing Solutions</a></h4>
+                        <div class="space16"></div>
+                        <p>Harness the power of the cloud with our robust cloud computing solutions. Whether you're
+                            looking to migrate to the cloud, optimize your existing infrastructure, or build scalable
+                            cloud-native.</p>
+                        <div class="space16"></div>
+                        <a href="service-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1100">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/service-icon2.png' %}" alt="">
+                    </div>
+                    <div class="heading1">
+                        <h4><a href="service-details.html">CData Analytics & Business Intelligence</a></h4>
+                        <div class="space16"></div>
+                        <p>Unlock actionable insights and drive informed decision-making with our advanced data
+                            analytics and business intelligence services. Our data-driven approach empowers you to
+                            harness the full potential.</p>
+                        <div class="space16"></div>
+                        <a href="service-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="800">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/service-icon3.png' %}" alt="">
+                    </div>
+                    <div class="heading1">
+                        <h4><a href="service-details.html">Cybersecurity & Compliance</a></h4>
+                        <div class="space16"></div>
+                        <p>Protect your business from evolving cyber threats and ensure compliance with industry
+                            regulations with comprehensive.</p>
+                        <div class="space16"></div>
+                        <a href="service-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="1200">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/service-icon4.png' %}" alt="">
+                    </div>
+                    <div class="heading1">
+                        <h4><a href="service-details.html">Software Development</a></h4>
+                        <div class="space16"></div>
+                        <p>Transform your ideas into reality with our custom software development and integration
+                            services whether you need.</p>
+                        <div class="space16"></div>
+                        <a href="service-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="900">
+                <div class="single-box">
+                    <div class="icon">
+                        <img src="{% static 'assets/img/icons/service-icon5.png' %}" alt="">
+                    </div>
+                    <div class="heading1">
+                        <h4><a href="service-details.html">It Consulting & Support</a></h4>
+                        <div class="space16"></div>
+                        <p>Navigate the complexities of the digital landscape with confidence with our IT consulting and
+                            support services.</p>
+                        <div class="space16"></div>
+                        <a href="service-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--=====SERVICE AREA END=======-->
+
+<!--=====WORK AREA START=======-->
+
+<div class="work sp">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Best It Solution</span>
+                    <h2 class="title tg-element-title">Let's Elevate Your Business With Strategic IT Solutions</h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-right" data-aos-duration="700">At TechXen, we understand that every business is
+                        unique, which is why we offer a range of flexible IT solutions designed to address your specific
+                        challenges and goals.</p>
+
+                    <div class="single-items" data-aos="fade-right" data-aos-duration="700">
+                        <div class="">
+                            <div class="icon">
+                                <img src="{% static 'assets/img/icons/work-iocn1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <h4><a href="service-details.html">Network Infrastructure Solutions</a></h4>
+                            <div class="space10"></div>
+                            <p>Build a reliable and secure network infrastructure that supports your business operations
+                                enables seamless</p>
+                        </div>
+                    </div>
+
+                    <div class="single-items" data-aos="fade-right" data-aos-duration="900">
+                        <div class="">
+                            <div class="icon">
+                                <img src="{% static 'assets/img/icons/work-iocn2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <h4><a href="service-details.html">Managed It Services</a></h4>
+                            <div class="space10"></div>
+                            <p>Focus on your core business activities while we take care of your IT needs with our
+                                managed IT services.</p>
+                        </div>
+                    </div>
+
+                    <div class="single-items" data-aos="fade-right" data-aos-duration="1100">
+                        <div class="">
+                            <div class="icon">
+                                <img src="{% static 'assets/img/icons/work-iocn3.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <h4><a href="service-details.html">Data Backup & Disaster Recovery</a></h4>
+                            <div class="space10"></div>
+                            <p>Protect your critical business data and ensure business continuity with our data backup
+                                and disaster solution.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="space30"></div>
+                <div class="" data-aos="fade-right" data-aos-duration="800">
+                    <a class="theme-btn1" href="#">Discover More <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="work-images">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="image reveal image-anime">
+                                <img src="{% static 'assets/img/work/work-img1.png' %}" alt="">
+                            </div>
+                            <div class="image reveal image-anime">
+                                <img src="{% static 'assets/img/work/work-img3.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image reveal image-anime">
+                                <img src="{% static 'assets/img/work/work-img2.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/img/bg/work-bg.png' %}" alt="" class="bg-image shape-animaiton4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====WORK AREA END=======-->
+
+<!--=====PROJECT AREA START=======-->
+
+<div class="project sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Our Project</span>
+                    <h2 class="title tg-element-title">Driving Success Through Innovative IT Solution Project</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="project-slider owl-carousel" data-aos="fade-up" data-aos-duration="800">
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img1.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img2.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img3.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img1.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img2.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+                <div class="single-slider">
+                    <div class="slider-img">
+                        <img src="{% static 'assets/img/work/project-img3.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <h3><a href="project-details.html">Enterprise Resource Planning Implementation</a></h3>
+                        <a href="project-details.html" class="learn">Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--=====PROJECT AREA END=======-->
+
+<!--=====PRICING AREA START=======-->
+
+<div class="pricing sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Our Pricing Plan</span>
+                    <h2 class="title tg-element-title">Explore Our Flexible Pricing Plans</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="700">
+                <div class="single-pricing-box">
+                    <p class="title">Basic Plan</p>
+                    <h2>$9.9<span>/ month</span></h2>
+                    <p class="pera">Ideal for startups and small businesses looking get started essential IT
+                        services.</p>
+
+                    <div class="border"></div>
+
+                    <h4>Featured Included:</h4>
+                    <ul class="list">
+                        <li><span><i class="fa-solid fa-check"></i></span> Network Monitoring</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Helpdesk Support (Limited Hours)</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Basic Cybersecurity Protection</li>
+                    </ul>
+
+                    <div class="space30"></div>
+                    <div class="button">
+                        <a class="theme-btn1" href="#">Buy Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1100">
+                <div class="single-pricing-box active">
+                    <div class="most-popular">
+                        <p>Most Popular</p>
+                    </div>
+
+                    <p class="title">Standard Plan</p>
+                    <h2>$19.9<span>/ month</span></h2>
+                    <p class="pera">Perfect for growing businesses that require additional features and support. </p>
+
+                    <div class="border"></div>
+
+                    <h4>Featured Included:</h4>
+                    <ul class="list">
+                        <li><span><i class="fa-solid fa-check"></i></span> 24/7 Network Monitoring</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Dedicated Helpdesk Support</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Advance Cybersecurity Protection</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Cloud Backup & Recovery</li>
+                    </ul>
+
+                    <div class="space30"></div>
+                    <div class="button">
+                        <a class="theme-btn1" href="#">Buy Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="900">
+                <div class="single-pricing-box">
+
+                    <p class="title">Premium Plan</p>
+                    <h2>$9.9<span>/ month</span></h2>
+                    <p class="pera">Tailored for larger enterprises with complex IT needs and stringent security.</p>
+
+                    <div class="border"></div>
+
+                    <h4>Featured Included:</h4>
+                    <ul class="list">
+                        <li><span><i class="fa-solid fa-check"></i></span> Customised Network Monitoring</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Priority Helpdesk Support</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Comprehensive Cybersecurity Suite</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Disaster Recovery Planning & Testing</li>
+                        <li><span><i class="fa-solid fa-check"></i></span> Onsite Support (as needed)</li>
+                    </ul>
+
+                    <div class="space30"></div>
+                    <div class="button">
+                        <a class="theme-btn1" href="#">Buy Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--=====PRICING AREA END=======-->
+
+<!--=====TESTIMONIAL AREA START=======-->
+
+<div class="testimonial sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Testimonials</span>
+                    <h2 class="title tg-element-title">Discover What Our Clients Have <br> To Say About Us</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row _relative">
+            <div class="tes1-slider" data-aos="fade-up" data-aos-duration="800">
+                <div class="tes1-single-slider">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="right-side">
+                                <h4>What Our Clients Are Saying</h4>
+                                <p>"The team at TechXen went above and beyond to understand our business needs and
+                                    deliver a tailored IT solution that exceeded our expectations. Their expertise and
+                                    dedication, and we couldn't be happier with the results."</p>
+                                <div class="bottom-area">
+                                    <div class="img">
+                                        <img src="{% static 'assets/img/testimonial/tes1-smoll-img.png' %}" alt="">
+                                    </div>
+                                    <div class="heading">
+                                        <h5><a href="#">Kelly Williamson</a></h5>
+                                        <p>Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="left-side">
+                                <img src="{% static 'assets/img/testimonial/tes1-big-img.png' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tes1-single-slider">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="right-side">
+                                <h4>What Our Clients Are Saying</h4>
+                                <p>"The team at TechXen went above and beyond to understand our business needs and
+                                    deliver a tailored IT solution that exceeded our expectations. Their expertise and
+                                    dedication, and we couldn't be happier with the results."</p>
+                                <div class="bottom-area">
+                                    <div class="img">
+                                        <img src="{% static 'assets/img/testimonial/tes1-smoll-img.png' %}" alt="">
+                                    </div>
+                                    <div class="heading">
+                                        <h5><a href="#">Kelly Williamson</a></h5>
+                                        <p>Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="left-side">
+                                <img src="{% static 'assets/img/testimonial/tes1-big-img.png' %}" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="tes1-arrows">
+                <button class="testimonial-prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="testimonial-next-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====TESTIMONIAL AREA END=======-->
+
+<!--=====BLOG AREA START=======-->
+
+<div class="blog sp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="heading1">
+                    <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img
+                            src="{% static 'assets/img/icons/span1.png' %}" alt=""> Blog & Latest News</span>
+                    <h2 class="title tg-element-title">Latest News & Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="blog-box" data-aos="zoom-in-up" data-aos-duration="1100">
+                    <div class="image image-anime">
+                        <img src="{% static 'assets/img/blog/blog-img1.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <div class="tags">
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon1.png' %}" alt=""> John
+                                William</a>
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon2.png' %}" alt=""> Feb 25, 24</a>
+                        </div>
+                        <h4><a href="blog-details.html">Demystifying Blockchain: How It's Revolutionising
+                            Industries.</a></h4>
+                        <a href="blog-details.html" class="learn"> Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="blog-box" data-aos="zoom-in-up" data-aos-duration="900">
+                    <div class="image image-anime">
+                        <img src="{% static 'assets/img/blog/blog-img2.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <div class="tags">
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon1.png' %}" alt=""> John
+                                William</a>
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon2.png' %}" alt=""> Feb 25, 24</a>
+                        </div>
+                        <h4><a href="blog-details.html">Cybersecurity Essentials: Protecting Your Business </a></h4>
+                        <a href="blog-details.html" class="learn"> Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="blog-box" data-aos="zoom-in-up" data-aos-duration="700">
+                    <div class="image image-anime">
+                        <img src="{% static 'assets/img/blog/blog-img3.png' %}" alt="">
+                    </div>
+                    <div class="heading">
+                        <div class="tags">
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon1.png' %}" alt=""> John
+                                William</a>
+                            <a href="#"><img src="{% static 'assets/img/icons/blog-icon2.png' %}" alt=""> Feb 25, 24</a>
+                        </div>
+                        <h4><a href="blog-details.html">The Future of Work: Embracing Remote Collaboration Tools</a>
+                        </h4>
+                        <a href="blog-details.html" class="learn"> Learn More <span><i
+                                class="fa-solid fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--=====BLOG AREA END=======-->
+
+<!--=====CTA AREA START=======-->
+
+<div class="cta">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="heading1-w">
+                    <h2 class="title tg-element-title">At TechXen IT Solutions, We're Committed To Businesses</h2>
+                    <div class="space16"></div>
+                    <p data-aos="fade-right" data-aos-duration="700">Take the first step towards achieving your business
+                        goals by contacting us today. Schedule a consultation with one of our IT specialists to discuss
+                        your objectives and explore how our innovative solutions can propel.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="buttons">
+                    <a class="cta-btn1" href="service.html">Request a Consultaion <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+                    <a class="cta-btn2" href="service.html">Explore Solution <span><i
+                            class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====CTA AREA END=======-->
+
+{% endblock %}
