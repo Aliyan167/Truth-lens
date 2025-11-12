@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/images/svg/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+<!-- ====================================== Header ===================================== -->
+<div class="overlay" onclick="toggleMenu()"></div>
+<header id="top-navbar" class="top-navbar">
+    <div class="container">
+        <nav>
+            <a href="feature.html" class="logo">
+                <img src="{% static 'assets/images/svg/favicon.svg' %}" alt="logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="{% static 'assets/images/svg/menu.svg' %}" alt="menu">
+            </div>
+            <div class="nav-links-mn">
+                <ul class="nav-links">
+                    <li class="d-flex justify-content-center">
+                        <a href="feature.html" class="side-menu-logo">
+                            <img src="{% static 'assets/images/svg/logo.svg' %}" alt="logo">
+                        </a>
+                    </li>
+                    <li><a class="a-link" href="{% url 'website:home' %}">Home</a></li>
+                    <li><a class="a-link" href="{% url 'website:ho' %}">Image Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:upload_video' %}">Video Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:about' %}">About</a></li>
+                    <li><a class="a-link" href="{% url 'website:contact' %}">Contact Us</a></li>
+                </ul>
+                <div class="ml-auto">
+                    <!-- Place it here -->
+                    {% if user.is_authenticated %}
+                        <span class="me-3" style="color: white;">Welcome, {{ user.username }}</span>
+                        <a href="{% url 'website:logout' %}" class="btn btn-outline-danger btn-sm">Logout</a>
+
+
+                    {% else %}
+                        <a href="#" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span>Login</span>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="header-buttons-main">
+                    <a href="#home" class="button"> Get Started
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- ====================================== Section Blog ===================================== -->
+<section class="section-blog position-relative">
+    <img class="blue-gardient8sa" src="{% static 'assets/images/home-page/blue-gardient8.png' %}" alt="blue-gardient8">
+    <img class="blue-gardient9sa" src="{% static 'assets/images/home-page/blue-gardient9.png' %}" alt="blue-gardient9">
+    <div class="container">
+        <h1 class="sec-heding"><span>Contact</span> Us</h1>
+        <p class="sub-heding">Nunc facilisis pulvinar sit ut vitae aliquet quisque. Malesuada pellentesque diam
+            praesent vitae ullamcorper et a volutpat congue eget massa neque diam sed sit.
+        </p>
+        <div class="row home-features-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features1.svg' %}" alt="features1">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h2 class="gendseratio">Call Us</h2>
+                <p class="eugiat">Open a chat or give us a call at</p>
+                <a class="numb-con" href="tel:012466422710">+01 (246) 642-2710</a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features2.svg' %}" alt="features2">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h2 class="gendseratio">Email Us</h2>
+                <p class="eugiat">Open a chat or Live chat service</p>
+                <a class="numb-con" href="mailto:help@ciriai.com">help@ciriai.com</a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features3.svg' %}" alt="features3">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h2 class="gendseratio">Our Address</h2>
+                <p class="eugiat">218 Parkview Cir. Syracuse,<br> California 208434</p>
+            </div>
+        </div>
+        <div class="row form-row pb-0 position-relative">
+            <img class="askjm-sa" src="{% static 'assets/images/home-page/blue-gardient7.png' %}" alt="blue-gardient7">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9">
+                <form class="from-main">
+                    <h2 class="sec-heding quest">Get In<span> Touch </span></h2>
+                    <p class="dui seci lkkfs">Our team would love to hear from you. Write your message to us!</p>
+                    <input class="conta-input-main" type="text" placeholder="Enter your full name" name="fullName"
+                           autocomplete="off">
+                    <input class="conta-input-main" type="text" placeholder="Enter your email address" name="email"
+                           autocomplete="off">
+                    <textarea name="message" placeholder="Write your message"></textarea>
+                    <div class="submit-btn">
+                        <a href="#" class="button"> Submit Now
+                            <span class="hoverEffect">
+                                    <span></span>
+                                </span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <img class="shoot-fanta" src="{% static 'assets/images/home-page/shoot-fanta.jpg' %}" alt="shoot-fanta">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====================================== Section Footer ===================================== -->
+<footer class="position-relative footer-main">
+    <img class="footer-logo" src="{% static 'assets/images/home-page/footer-logo.png' %}" alt="footer-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-5 footer-col-fir">
+                <svg class="djks" xmlns="http://www.w3.org/2000/svg" width="2" height="100" viewBox="0 0 2 100"
+                     fill="none">
+                    <path d="M1 0L0.999996 100" stroke="url(#paint0_linear_137_269)" stroke-width="2"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_137_269" x1="1.5" y1="2.18557e-08" x2="1.5" y2="100"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1A1A1A" offset="0"/>
+                            <stop offset="0.5" stop-color="#00FFB1"/>
+                            <stop offset="1" stop-color="#1A1A1A"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h2 class="sec-heding advice">Insider AI art Advice from <span> Top-Notch Ciri AI?</span></h2>
+                <p class="dui seci dsos">Adipiscing ridiculus eu curabitur in sit sed. Tellus at quam eros nec
+                    molestie a
+                    non quis. Donec amet tempor ac nunc turpis platea congue erat.
+                </p>
+                <div class="ref-demo">
+                    <a href="index.html" class="button"> Request Demo
+                        <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-7 footer-col-sec">
+                <img class="footer-gefdo" src="{% static 'assets/images/home-page/blue-gardient2.png' %}"
+                     alt="blue-gardient2">
+                <div class="box-footer">
+                    <p class="resour">Resources</p>
+                    <ul class="foot-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li class="mb-0"><a href="#">Request API Access</a></li>
+                    </ul>
+                </div>
+                <div class="box-footer">
+                    <p class="resour">Quick Links</p>
+                    <ul class="foot-links">
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Login</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li class="mb-0"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coprights-main">
+        <svg class="das" xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+            <path d="M100 1L8.49366e-07 0.999996" stroke="url(#paint0_linear_137_271)" stroke-width="2"/>
+            <defs>
+                <linearGradient id="paint0_linear_137_271" x1="100" y1="1.5" x2="-2.18557e-08" y2="1.5"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1A1A1A" offset="0"/>
+                    <stop offset="0.5" stop-color="#5C33FF"/>
+                    <stop offset="1" stop-color="#1A1A1A"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="container">
+            <div class="rights-reserved">
+                <h2>© 2025 - All rights reserved by
+                    <a href="https://1.envato.market/website-portfolio" target="_blank">Dev.</a>
+                </h2>
+                <div class="footer-media">
+                    <a href="https://www.facebook.com/"><img src="{% static 'assets/images/svg/facebook.svg' %}"
+                                                             alt="facebook">Facebook</a>
+                    <a href="https://www.instagram.com/"><img src="{% static 'assets/images/svg/insta.svg' %}"
+                                                              alt="insta">Instagram</a>
+                    <a href="https://x.com/"><img src="{% static 'assets/images/svg/twitter.svg' %}" alt="twitter">Twitter</a>
+                    <a href="https://www.linkedin.com/"><img src="{% static 'assets/images/svg/linkedin.svg' %}"
+                                                             alt="linkedin">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Login Sign In From -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body form-modal-body">
+                <button type="button" class="btn-close form-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <div class="container-demo">
+                    <div class="user signinBx">
+                        <div class="imgBx"><img src="{% static 'assets/images/home-page/form-img1.jpg' %}"
+                                                alt="form-img1"></div>
+                        <div class="formBx">
+                            <form>
+                                <h2>Sign In</h2>
+                                <input type="text" name="username" placeholder="Username" autocomplete="off">
+                                <input type="password" name="password" placeholder="Password" autocomplete="off">
+                                <a href="#" class="button subscribeBtn">Login
+                                    <span class="hoverEffect">
+                                            <span></span>
+                                        </span>
+                                </a>
+                                <p class="signup">
+                                    Don't have an account ?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign Up</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="user signupBx">
+                        <div class="formBx">
+                            <form>
+                                <h2>Create an account</h2>
+                                <input type="text" name="username" placeholder="Username" autocomplete="off">
+                                <input type="email" name="email" placeholder="Email Address" autocomplete="off">
+                                <input type="password" name="cpass" placeholder="Create Password"
+                                       autocomplete="off">
+                                <input type="password" name="conPass" placeholder="Confirm Password"
+                                       autocomplete="off">
+                                <a href="#" class="button subscribeBtn">Sign Up
+                                    <span class="hoverEffect">
+                                            <span></span>
+                                        </span>
+                                </a>
+                                <p class="signup">
+                                    Already have an account ?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign in</a>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="imgBx"><img src="{% static 'assets/images/home-page/form-img2.jpg' %}"
+                                                alt="form-img2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====================================== Bottom To Top Button ===================================== -->
+<button class="bottom-top-button">&#8593;</button>
+<!-- ====================================== Bottom To Top Button End ===================================== -->
+<script src="{% static 'assets/javascript/jquery.js' %}"></script>
+<script src="{% static 'assets/javascript/smooth-scroll.js' %}"></script>
+<script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+<script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 12:17:30 GMT -->
+</html>

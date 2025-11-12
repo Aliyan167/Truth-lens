@@ -1,0 +1,654 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/images/svg/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+<!-- ====================================== Header ===================================== -->
+<div class="overlay" onclick="toggleMenu()"></div>
+<header id="top-navbar" class="top-navbar">
+    <div class="container">
+        <nav>
+            <a href="feature.html" class="logo">
+                <img src="{% static 'assets/images/svg/favicon.svg' %}" alt="logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="{% static 'assets/images/svg/menu.svg' %}" alt="menu">
+            </div>
+            <div class="nav-links-mn">
+                <ul class="nav-links">
+                    <li class="d-flex justify-content-center">
+                        <a href="feature.html" class="side-menu-logo">
+                            <img src="{% static 'assets/images/svg/logo.svg' %}" alt="logo">
+                        </a>
+                    </li>
+                    <li><a class="a-link" href="{% url 'website:home' %}">Home</a></li>
+                    <li><a class="a-link" href="{% url 'website:ho' %}">Image Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:upload_video' %}">Video Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:about' %}">About</a></li>
+                    <li><a class="a-link" href="{% url 'website:contact' %}">Contact Us</a></li>
+                </ul>
+                <div class="ml-auto">
+                    <!-- Place it here -->
+                    {% if user.is_authenticated %}
+                        <span class="me-3" style="color: white;">Welcome, {{ user.username }}</span>
+                        <a href="{% url 'website:logout' %}" class="btn btn-outline-danger btn-sm">Logout</a>
+
+
+                    {% else %}
+                        <a href="#" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span>Login</span>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="header-buttons-main">
+                    <a href="#home" class="button"> Get Started
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- ====================================== About-Section One ===================================== -->
+<section class="section-six overflow-hidden">
+    <div class="container">
+        <h1 class="sec-heding"><span> About</span> Us</h1>
+        <h2 class="d-none">hidden</h2>
+        <p class="sub-heding">We're passionate about empowering creatives with the tools they need to bring their
+            vision to life that's why we've developed.</p>
+        <div class="video-container" id="video-container">
+            <img class="blue-gardient6" src="{% static 'assets/images/home-page/blue-gardient6.png' %}"
+                 alt="blue-gardient6">
+            <img class="blue-gardient5" src="{% static 'assets/images/home-page/blue-gardient5.png' %}"
+                 alt="blue-gardient5">
+            <video autoplay loop muted class="home-sec-one-video">
+                <source src="{% static 'assets/video/video1.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+        <div class="row marketingRow mb-0">
+            <div class="col-xxl-6 col-xl-6">
+                <p class="dui pb-2">Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra et rhoncus
+                    bibendum luctus. Tristique interdum cursus dictum gravida sed feugiat morbi. Id est sed urna
+                    maecenas est placerat aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien non.
+                </p>
+                <p class="dui">Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra et rhoncus
+                    bibendum luctus. Tristique interdum cursus dictum gravida sed feugiat morbi. Id est sed urna
+                    maecenas est placerat aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien non.
+                    Tristique tellus ac proin integer. Vitae elementum vitae sem arcu. Lorem aliquam.
+                </p>
+                <div class="ref-demo">
+                    <a href="index.html" class="button"> Request Demo
+                        <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6">
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Quis sit in id egestas turpis vitae tristique senectus</h3>
+                </div>
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Neque eleifend amet ut vel fusce facilisis nulla</h3>
+                </div>
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Nulla at diam cursus lorem nunc facilisis non phasellus</h3>
+                </div>
+                <div class="quis-head mb-0">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Nullam faucibus facilisis nunc turpis adipiscing</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================================  About-Section Two ===================================== -->
+<section class="section-five pt-0">
+    <div class="logos sldkjf">
+        <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+                <div class="vis-tex vis-tex1">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo1">
+                    <h2>Take Your Visuals to the</h2>
+                </div>
+                <div class="vis-tex vis-tex2">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                    <h2>AI Image Generator</h2>
+                </div>
+                <div class="vis-tex vis-tex3">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo3">
+                    <h2>Next Level</h2>
+                </div>
+                <div class="vis-tex vis-tex2">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                    <h2>AI Image Generator</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================================  About-Section Three ===================================== -->
+<section class="section-four pt-0 position-relative">
+    <img class="blue-gardient3" src="{% static 'assets/images/home-page/blue-gardient3.png' %}" alt="blue-gardient3">
+    <div class="container">
+        <h2 class="sec-heding"> Get Images of from <span>3 Simple Process</span></h2>
+        <p class="sub-heding">They evolve and learn from experiences. Benefit from adaptive algorithms that
+            continuously improve performance:</p>
+        <div class="wrapper">
+            <div class="sugg-box">
+                <div class="sugg-img-main">
+                    <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img1.jpg' %}" alt="sugg-img1">
+                </div>
+                <div>
+                    <div class="stie pt-0">
+                        <p class="setpSugg">Step 1</p>
+                        <h3 class="gendseratio flex-pri">Describe what you’d like to create</h3>
+                        <p class="eugiat flex-pri">Type any idea that you want to create in text format. In the
+                            twilight of curiosity, let's craft a narrative tapestry.</p>
+                    </div>
+                    <div class="stie">
+                        <p class="setpSugg">Step 2</p>
+                        <h3 class="gendseratio flex-pri">Input options and style</h3>
+                        <p class="eugiat flex-pri">In the realm of creative alchemy, browse through a large library
+                            and pick a style that suits your idea perfectly.</p>
+                    </div>
+                    <div class="stie pb-0 border-bottom-0">
+                        <p class="setpSugg">Step 3</p>
+                        <h3 class="gendseratio flex-pri">Create art with your idea</h3>
+                        <p class="eugiat flex-pri">Click to generate a special masterpiece that goes beyond the
+                            usual and captures your imagination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================================  About-Section Four ===================================== -->
+<section class="section-three position-relative pt-0">
+    <div class="container">
+        <h2 class="ering reveal-text">We're passionate about empowering creatives with the tools they need to bring
+            their vision to life that's why we've developed.</h2>
+        <div class="community-btn-main">
+            <a href="#subscribe" class="button"> Join Community
+                <span class="hoverEffect">
+                        <span></span>
+                    </span>
+            </a>
+        </div>
+        <p class="sub-heding glob pt-0">We Worked With Global Largest 10,000+ Brands</p>
+    </div>
+    <div class="logos logos1">
+        <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png' %}" alt="logo3">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png' %}" alt="logo6">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png' %}" alt="logo7">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logos">
+        <div class="logos-slide rtl">
+            <div class="marquee__content">
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png' %}" alt="logo3">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png' %}" alt="logo6">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png' %}" alt="logo7">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================================  About-Section Five ===================================== -->
+<section class="section-nine">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-5 col-xl-5 col-lg-5">
+                <h2 class="sec-heding quest"><span> Questions? </span><br> We have Answers</h2>
+                <p class="dui seci">Explore our FAQ secion, your quick guide to essential insights and
+                    solutions, addressing the most common queries about Power AI.
+                </p>
+            </div>
+            <div class="col-xxl-7 col-xl-7 col-lg-7">
+                <div class="accordion faq" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How can I get started with Ciri AI’s services?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor mattis. Id
+                                pharetra quis pellentesque tristique mattis morbi ut etiam purus. Semper suspendisse
+                                et justo nisl tellus faucibus pharetra. Semper ullamcorper eu sit velit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Ciri AI provide automated service?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                                ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                                Augue neque gravida in fermentum et sollicitudin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Are there any discounts for annual subscriptions?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                                ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                                Augue neque gravida in fermentum et sollicitudin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How can I get technical support if I encounter issues?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                                ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                                Augue neque gravida in fermentum et sollicitudin.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header asd" id="headingFive">
+                            <button class="accordion-button collapsed border-bottom-0 pb-0" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                Is there an API for integration with other platforms?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                                ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                                Augue neque gravida in fermentum et sollicitudin.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tryImage-btn-main grnezQ mb-0">
+                    <a href="faq.html" class="button"> Read More FAQs
+                        <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====================================== Section Subscribe ===================================== -->
+<section class="section-subscribe position-relative">
+    <img class="blurek" src="{% static 'assets/images/home-page/blue-gardient7.png' %}" alt="blue-gardient7">
+    <img class="blurek2" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+    <div class="container position-relative">
+        <img class="robot" src="{% static 'assets/images/home-page/robot.jpg' %}" alt="robot">
+        <video autoplay loop muted class="home-sec-two-video2">
+            <source src="{% static 'assets/video/video2.mp4' %}" type="video/mp4">
+        </video>
+        <div class="cretive-box">
+            <h2 class="sec-heding">Ready To Start Creating Stunning <br><span> Images With Ciri AI?</span></h2>
+            <p class="sub-heding"> Sign up today and unlock the full potential of our tool. With a range processing
+                techniques and features at your fingerprints, you’ll be amazed what you will achieved.</p>
+            <div class="community-btn-main mb-0">
+                <a href="index.html" class="button"> Get Started Now
+                    <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="subs-sec" id="subscribe">
+    <div class="container">
+        <div class="row fassd-row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <h2 class="sec-heding quest"><span> Subscribe </span><br> for the Updates!</h2>
+                <p class="dui seci">Elementum mauris platea congue sit dictum. Ultrices sed tristique
+                    fringilla aenean malesuada.
+                </p>
+                <div class="sub-scjsd-inp-main">
+                    <input type="text" placeholder="Enter Email Address" name="Enter Email Address"
+                           autocomplete="off">
+                    <a href="#" class="button subscribeBtn">Subscribe
+                        <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                    </a>
+                </div>
+                <div class="footer-checkbox-sec">
+                    <input class="footer-checkbox-input" id="footer-checkbox" type="checkbox">
+                    <label for="footer-checkbox" class="footer-chec-txt">I agree to the
+                        <a href="#">Privacy Policy.</a>
+                    </label>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 faasd">
+                <div class="position-relative">
+                    <img class="fantasy1" src="{% static 'assets/images/home-page/fantasy1.jpg' %}" alt="fantasy1">
+                    <img class="fantasy2" src="{% static 'assets/images/home-page/fantasy2.jpg' %}" alt="fantasy2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====================================== Section Blog ===================================== -->
+<section class="section-blog pt-0 position-relative">
+    <img class="blog-gardient" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+    <div class="container">
+        <h2 class="sec-heding">The Latest <span> News & Blog</span></h2>
+        <p class="sub-heding">Congue sed pharetra proin purus quis vehicula sit. In bibendum volutpat dictum
+            pulvinar faucibus nulla. Neque sed augue praesent tristique ac gravida commodo.
+        </p>
+        <div class="row home-blog-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img1.jpg' %}"
+                             alt="blog-img1">
+                        <p class="date-blog">Feb 25, 2025</p>
+                    </div>
+                    <h2 class="eque">Neque duis aliquam pellentesque nam turpis volutpat volutpat.</h2>
+                    <p class="ilisis">Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor
+                        mattis. Id pharetra quis pellentesque tristique mattis morbit velit.</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img2.jpg' %}"
+                             alt="blog-img2">
+                        <p class="date-blog">Feb 20, 2025</p>
+                    </div>
+                    <h2 class="eque">Cursus iaculis convallis id malesuada libero commodo.</h2>
+                    <p class="ilisis">Urna urna ut consequat ut massa aliquet ipsum quam. Urna lectus ut in ac diam
+                        cras viverra. Urna urna ut consequat ut massa aliquet</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img3.jpg' %}"
+                             alt="blog-img3">
+                        <p class="date-blog">Feb 15, 2025</p>
+                    </div>
+                    <h2 class="eque">Sagittis lectus sed aliquam at proin quis aliquam vitae.</h2>
+                    <p class="ilisis">Ullamcorper facilisis sit sed sollicitudin faucibus in fermentum neque.
+                        Malesuada accumsan Ullamcorper facilisis sit sed sollicitudin faucibus.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====================================== Section Footer ===================================== -->
+<footer class="position-relative footer-main">
+    <img class="footer-logo" src="{% static 'assets/images/home-page/footer-logo.png' %}" alt="footer-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-5 footer-col-fir">
+                <svg class="djks" xmlns="http://www.w3.org/2000/svg" width="2" height="100" viewBox="0 0 2 100"
+                     fill="none">
+                    <path d="M1 0L0.999996 100" stroke="url(#paint0_linear_137_269)" stroke-width="2"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_137_269" x1="1.5" y1="2.18557e-08" x2="1.5" y2="100"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1A1A1A" offset="0"/>
+                            <stop offset="0.5" stop-color="#00FFB1"/>
+                            <stop offset="1" stop-color="#1A1A1A"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h2 class="sec-heding advice">Insider AI art Advice from <span> Top-Notch Ciri AI?</span></h2>
+                <p class="dui seci dsos">Adipiscing ridiculus eu curabitur in sit sed. Tellus at quam eros nec
+                    molestie a non quis. Donec amet tempor ac nunc turpis platea congue erat.
+                </p>
+                <div class="ref-demo">
+                    <a href="index.html" class="button"> Request Demo
+                        <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-7 footer-col-sec">
+                <img class="footer-gefdo" src="{% static 'assets/images/home-page/blue-gardient2.png' %}"
+                     alt="blue-gardient2">
+                <div class="box-footer">
+                    <p class="resour">Resources</p>
+                    <ul class="foot-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li class="mb-0"><a href="#">Request API Access</a></li>
+                    </ul>
+                </div>
+                <div class="box-footer">
+                    <p class="resour">Quick Links</p>
+                    <ul class="foot-links">
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Login</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li class="mb-0"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coprights-main">
+        <svg class="das" xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+            <path d="M100 1L8.49366e-07 0.999996" stroke="url(#paint0_linear_137_271)" stroke-width="2"/>
+            <defs>
+                <linearGradient id="paint0_linear_137_271" x1="100" y1="1.5" x2="-2.18557e-08" y2="1.5"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1A1A1A" offset="0"/>
+                    <stop offset="0.5" stop-color="#5C33FF"/>
+                    <stop offset="1" stop-color="#1A1A1A"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="container">
+            <div class="rights-reserved">
+                <h2>© 2025 - All rights reserved by
+                    <a href="https://1.envato.market/website-portfolio" target="_blank"> Dev.</a>
+                </h2>
+                <div class="footer-media">
+                    <a href="https://www.facebook.com/"><img src="{% static 'assets/images/svg/facebook.svg' %}"
+                                                             alt="facebook">Facebook</a>
+                    <a href="https://www.instagram.com/"><img src="{% static 'assets/images/svg/insta.svg' %}"
+                                                              alt="insta">Instagram</a>
+                    <a href="https://x.com/"><img src="{% static 'assets/images/svg/twitter.svg' %}" alt="twitter">Twitter</a>
+                    <a href="https://www.linkedin.com/"><img src="{% static 'assets/images/svg/linkedin.svg' %}"
+                                                             alt="linkedin">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Login Sign In From -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body form-modal-body">
+                <button type="button" class="btn-close form-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <div class="container-demo">
+                    <div class="user signinBx">
+                        <div class="imgBx"><img src="{% static 'assets/images/home-page/form-img1.jpg' %}"
+                                                alt="form-img1"></div>
+                        <div class="formBx">
+                            <form>
+                                <h2>Sign In</h2>
+                                <input type="text" name="username" placeholder="Username" autocomplete="off">
+                                <input type="password" name="password" placeholder="Password" autocomplete="off">
+                                <a href="#" class="button subscribeBtn">Login
+                                    <span class="hoverEffect">
+                                            <span></span>
+                                        </span>
+                                </a>
+                                <p class="signup">
+                                    Don't have an account ?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign Up</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="user signupBx">
+                        <div class="formBx">
+                            <form>
+                                <h2>Create an account</h2>
+                                <input type="text" name="username" placeholder="Username" autocomplete="off">
+                                <input type="email" name="email" placeholder="Email Address" autocomplete="off">
+                                <input type="password" name="cpass" placeholder="Create Password"
+                                       autocomplete="off">
+                                <input type="password" name="conPass" placeholder="Confirm Password"
+                                       autocomplete="off">
+                                <a href="#" class="button subscribeBtn">Sign Up
+                                    <span class="hoverEffect">
+                                            <span></span>
+                                        </span>
+                                </a>
+                                <p class="signup">
+                                    Already have an account ?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign in</a>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="imgBx"><img src="{% static 'assets/images/home-page/form-img2.jpg' %}"
+                                                alt=" form-img2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====================================== Bottom To Top Button ===================================== -->
+<button class="bottom-top-button">&#8593;</button>
+<!-- ====================================== Bottom To Top Button End ===================================== -->
+<script src="{% static 'assets/javascript/jquery.js' %}"></script>
+<script src="{% static 'assets/javascript/smooth-scroll.js' %}"></script>
+<script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+<script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Sep 2025 12:17:20 GMT -->
+</html>

@@ -1,0 +1,1086 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Lens</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/images/svg/favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+</head>
+<body>
+<!-- Header -->
+<div class="overlay" onclick="toggleMenu()"></div>
+<header id="top-navbar" class="top-navbar">
+    <div class="container">
+        <nav>
+            <a href="feature.html" class="logo">
+                <img src="{% static 'assets/images/svg/favicon.svg' %}" alt="logo">
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="{% static 'assets/images/svg/menu.svg' %}" alt="menu">
+            </div>
+            <div class="nav-links-mn">
+                <ul class="nav-links">
+                    <li class="d-flex justify-content-center">
+                        <a href="feature.html" class="side-menu-logo">
+                            <img src="{% static 'assets/images/svg/logo.svg' %}" alt="logo">
+                        </a>
+                    </li>
+                    <li><a class="a-link" href="{% url 'website:home' %}">Home</a></li>
+                    <li><a class="a-link" href="{% url 'website:ho' %}">Image Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:upload_video' %}">Video Detector</a></li>
+                    <li><a class="a-link" href="{% url 'website:about' %}">About</a>
+                    <li><a class="a-link" href="{% url 'website:contact' %}">Contact Us</a></li>
+                </ul>
+                <div class="ml-auto">
+                    <!-- Place it here -->
+                    {% if user.is_authenticated %}
+                        <span class="me-3" style="color: white;">Welcome, {{ user.username }}</span>
+                        <a href="{% url 'website:logout' %}" class="btn btn-outline-danger btn-sm">Logout</a>
+
+
+                    {% else %}
+                        <a href="#" class="button2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span>Login</span>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="header-buttons-main">
+                    <a href="#home" class="button"> Get Started
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- Section One -->
+<section class="section-one position-relative" id="home">
+    <img class="blue-gardient1" src="{% static 'assets/images/home-page/blue-gardient1.png' %}" alt="blue-gardient1">
+    <img class="blue-gardient2" src="{% static 'assets/images/home-page/blue-gardient2.png' %}" alt="blue-gardient2">
+    <div class="container">
+        <p class="elevate">Uncover the Truth with</p>
+        <h1 class="bestAI">Truth Lens Deepfake Detector</h1>
+        <p class="olut">Your One-Stop Solution for Detecting Deepfake Images with Advanced AI Technology.</p>
+        <div class="inputGenerate">
+            <input type="text" placeholder="Upload an image to analyze for deepfake detection" name="Analyze"
+                   autocomplete="off">
+            <a href="#" class="button generate-btn">Analyze Image
+                <span class="hoverEffect">
+                    <span></span>
+                </span>
+            </a>
+        </div>
+        <div class="hometags-main">
+            <p class="popTg">Key Features:</p>
+            <a href="#" class="hometags">Deepfake Detection</a>
+            <a href="#" class="hometags">AI Analysis</a>
+            <a href="#" class="hometags">Image Authenticity</a>
+            <a href="#" class="hometags">Forensic Tools</a>
+        </div>
+    </div>
+    <div class="photo-gallery">
+        <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img1.jpg' %}" alt="slider1-img1">
+        </div>
+        <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img3.jpg' %}" alt="slider1-img3">
+            <img src="{% static 'assets/images/home-page/slider1-img4.jpg' %}" alt="slider1-img4">
+        </div>
+        <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img2.jpg' %}" alt="slider1-img2">
+        </div>
+        <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img5.jpg' %}" alt="slider1-img5">
+            <img src="{% static 'assets/images/home-page/slider1-img6.jpg' %}" alt="slider1-img6">
+        </div>
+        <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img9.jpg' %}" alt="slider1-img9">
+        </div>
+        <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img7.jpg' %}" alt="slider1-img7">
+            <img src="{% static 'assets/images/home-page/slider1-img8.jpg' %}" alt="slider1-img8">
+        </div>
+        <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img10.jpg' %}" alt="slider1-img10">
+        </div>
+        <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img11.jpg' %}" alt="slider1-img11">
+            <img src="{% static 'assets/images/home-page/slider1-img12.jpg' %}" alt="slider1-img12">
+        </div>
+    </div>
+</section>
+<!-- Section Two -->
+<section class="section-two position-relative">
+    <img class="round-gradient1" src="{% static 'assets/images/home-page/round-gradient1.png' %}" alt="round-gradient1">
+    <div class="container">
+        <h2 class="sec-heding">Our <span>Features</span></h2>
+        <p class="sub-heding">Advanced AI-powered tools to detect and analyze deepfake images with precision and
+            reliability.</p>
+        <div class="row home-features-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features1.svg' %}" alt="features1">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">Deepfake Detection</h3>
+                <p class="eugiat">Utilize cutting-edge AI algorithms to identify manipulated or AI-generated images with
+                    high accuracy.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features2.svg' %}" alt="features2">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">Advanced AI Analysis</h3>
+                <p class="eugiat">Leverage sophisticated neural networks to analyze image authenticity and detect subtle
+                    anomalies.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features3.svg' %}" alt="features3">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">Real-Time Results</h3>
+                <p class="eugiat">Get instant feedback on image authenticity, enabling quick decision-making for content
+                    verification.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features4.svg' %}" alt="features4">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">User-Friendly Interface</h3>
+                <p class="eugiat">Easily upload and analyze images with an intuitive platform designed for all
+                    users.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features5.svg' %}" alt="features5">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">Detailed Reporting</h3>
+                <p class="eugiat">Receive comprehensive reports on detected manipulations, including confidence scores
+                    and visual markers.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <div class="features-cir-main">
+                    <div class="features-cir">
+                        <img src="{% static 'assets/images/svg/features6.svg' %}" alt="features6">
+                    </div>
+                    <span class="img-bg-circle"></span>
+                </div>
+                <h3 class="gendseratio">Flexible Pricing</h3>
+                <p class="eugiat">Choose from a range of pricing plans tailored to your needs, from individual users to
+                    enterprises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Three -->
+<section class="section-three position-relative pt-0">
+    <img class="round-gradient2" src="{% static 'assets/images/home-page/round-gradient2.png' %}" alt="round-gradient2">
+    <div class="container">
+        <h2 class="ering reveal-text">We're dedicated to protecting digital st by providing advanced tools to detect
+            deepfake images.</h2>
+        <div class="community-btn-main">
+            <a href="#subscribe" class="button"> Join Community
+                <span class="hoverEffect">
+                    <span></span>
+                </span>
+            </a>
+        </div>
+        <p class="sub-heding glob pt-0">Trusted by Over 10,000+ Organizations Worldwide</p>
+    </div>
+    <div class="logos logos1">
+        <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png' %}" alt="logo3">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png' %}" alt="logo6">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png' %}" alt="logo7">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logos">
+        <div class="logos-slide rtl">
+            <div class="marquee__content">
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png' %}" alt="logo3">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png' %}" alt="logo6">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png' %}" alt="logo7">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Four -->
+<section class="section-four pt-0 position-relative">
+    <img class="blue-gardient3" src="{% static 'assets/images/home-page/blue-gardient3.png' %}" alt="blue-gardient3">
+    <img class="blue-gardient4" src="{% static 'assets/images/home-page/blue-gardient4.png' %}" alt="blue-gardient4">
+    <div class="container">
+        <h2 class="sec-heding"><span>Enhance Your Verification</span> with Truth Lens</h2>
+        <p class="sub-heding">Experience a revolution in image authenticity verification with our AI-powered tools,
+            guiding you to confidently identify deepfakes.</p>
+        <div class="wrapper cursor">
+            <div class="sugg-box">
+                <div class="sugg-img-main">
+                    <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img1.jpg' %}" alt="sugg-img1">
+                </div>
+                <div>
+                    <p class="setpSugg">Step 1</p>
+                    <h3 class="gendseratio flex-pri">Upload Your Image</h3>
+                    <p class="eugiat flex-pri">Simply upload the image you want to analyze for authenticity using our
+                        secure platform.</p>
+                    <div class="tryImage-btn-main">
+                        <a href="#" class="button"> Try Deepfake Detection
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sugg-box">
+                <div class="sugg-img-main">
+                    <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img2.jpg' %}" alt="sugg-img2">
+                </div>
+                <div>
+                    <p class="setpSugg">Step 2</p>
+                    <h3 class="gendseratio flex-pri">AI Analysis</h3>
+                    <p class="eugiat flex-pri">Our advanced AI algorithms analyze the image for signs of manipulation or
+                        deepfake generation.</p>
+                    <div class="tryImage-btn-main">
+                        <a href="#" class="button"> Try Deepfake Detection
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sugg-box">
+                <div class="sugg-img-main">
+                    <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img3.jpg' %}" alt="sugg-img3">
+                </div>
+                <div>
+                    <p class="setpSugg">Step 3</p>
+                    <h3 class="gendseratio flex-pri">Review Results</h3>
+                    <p class="eugiat flex-pri">Receive a detailed report with confidence scores and visual indicators of
+                        authenticity.</p>
+                    <div class="tryImage-btn-main">
+                        <a href="#" class="button"> Try Deepfake Detection
+                            <span class="hoverEffect">
+                                <span></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Five -->
+<section class="section-five pt-0">
+    <div class="logos sldkjf">
+        <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+                <div class="vis-tex vis-tex1">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo1">
+                    <h2>Take Image Verification to the</h2>
+                </div>
+                <div class="vis-tex vis-tex2">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                    <h2>Next Level with Truth Lens</h2>
+                </div>
+                <div class="vis-tex vis-tex3">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo3">
+                    <h2>AI-Powered Detection</h2>
+                </div>
+                <div class="vis-tex vis-tex2">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                    <h2>Next Level with Truth Lens</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Six -->
+<section class="section-six pt-0 overflow-hidden">
+    <div class="container">
+        <h2 class="sec-heding">Powerful AI Features Built for <span>Deepfake Detection</span></h2>
+        <p class="sub-heding">Our mission is to empower users with tools to identify and combat deepfake images,
+            ensuring digital trust.</p>
+        <div class="row marketingRow">
+            <div class="col-xxl-6 col-xl-6">
+                <p class="dui pb-2">Truth Lens uses state-of-the-art AI to analyze images for signs of manipulation,
+                    providing accurate and reliable results. Our platform is designed for journalists, content creators,
+                    and organizations to verify image authenticity.</p>
+                <p class="dui">With a focus on precision and ease of use, Truth Lens delivers detailed reports and
+                    real-time analysis to help you make informed decisions about the images you encounter.</p>
+            </div>
+            <div class="col-xxl-6 col-xl-6">
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">High-Accuracy Deepfake Detection</h3>
+                </div>
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Real-Time Image Analysis</h3>
+                </div>
+                <div class="quis-head">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Comprehensive Reporting Tools</h3>
+                </div>
+                <div class="quis-head mb-0">
+                    <div class="features-cir-main quis-main">
+                        <div class="features-cir quis">
+                            <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                        </div>
+                        <span class="img-bg-circle quis-bg-cir"></span>
+                    </div>
+                    <h3 class="quis-text-list">Seamless API Integration</h3>
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <img class="blue-gardient6" src="{% static 'assets/images/home-page/blue-gardient6.png' %}"
+                 alt="blue-gardient6">
+            <img class="blue-gardient5" src="{% static 'assets/images/home-page/blue-gardient5.png' %}"
+                 alt="blue-gardient5">
+            <video autoplay loop muted class="home-sec-one-video">
+                <source src="{% static 'assets/video/video1.mp4' %}" type="video/mp4">
+            </video>
+            <a href="about.html" class="text-circle-main">
+                <img class="text-circle" src="{% static 'assets/images/home-page/text-circle.png' %}" alt="text-circle">
+                <img class="bg-down-arrow" src="{% static 'assets/images/svg/bg-down-arrow.svg' %}" alt="bg-down-arrow">
+            </a>
+        </div>
+        <div class="row whyChooseSec">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <h2 class="sec-heding whyChoose"><span>Why Choose Truth Lens:</span> Discover Our AI’s Power</h2>
+                <p class="dui pb-2">Embark on a journey to ensure digital trust with Truth Lens. Our AI-powered deepfake
+                    detection tools analyze images with unmatched precision.</p>
+                <p class="dui">Protect your content and reputation by identifying manipulated images with our
+                    user-friendly platform.</p>
+                <div class="tryImage-btn-main grnezQ">
+                    <a href="#" class="button"> Analyze an Image
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="exce-box">
+                    <span class="exce-box-ciecl" id="exce-box1"></span>
+                    <div class="excellent">
+                        <p><img src="{% static 'assets/images/svg/excellent.svg' %}" alt="excellent">Excellent Support
+                        </p>
+                    </div>
+                    <h3 class="rnaip">Our team provides 24/7 assistance to ensure you get the most out of Truth
+                        Lens.</h3>
+                </div>
+                <div class="exce-box">
+                    <span class="exce-box-ciecl" id="exce-box2"></span>
+                    <div class="excellent">
+                        <p><img src="{% static 'assets/images/svg/reliable.svg' %}" alt="reliable">Reliable Technology
+                        </p>
+                    </div>
+                    <h3 class="rnaip">Built on advanced AI models trained to detect even the most sophisticated
+                        deepfakes.</h3>
+                </div>
+                <div class="exce-box mb-0">
+                    <span class="exce-box-ciecl" id="exce-box3"></span>
+                    <div class="excellent">
+                        <p><img src="{% static 'assets/images/svg/unique.svg' %}" alt="unique">Unique Insights</p>
+                    </div>
+                    <h3 class="rnaip">Gain detailed insights into image authenticity with our comprehensive analysis
+                        tools.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Seven -->
+<section class="section-seven position-relative">
+    <img class="slider-gardient-blue" src="{% static 'assets/images/home-page/blue-gardient6.png' %}"
+         alt="blue-gardient6">
+    <img class="slider-gardient-blue2" src="{% static 'assets/images/home-page/blue-gardient2.png' %}"
+         alt="blue-gardient2">
+    <div class="container">
+        <h2 class="sec-heding people-sa">What Users Are <span>Saying About Truth Lens</span></h2>
+        <p class="sub-heding">Hear from users who trust Truth Lens to verify the authenticity of images and combat
+            deepfakes effectively.</p>
+        <div class="sayAboutSlider">
+            <div class="slide-box">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'assets/images/home-page/star.png' %}" alt="star">
+                </div>
+                <h2 class="beco">“Truth Lens has revolutionized how we verify images for our newsroom. Its accuracy in
+                    detecting deepfakes is unmatched.”</h2>
+                <p class="hoea">John Reynolds</p>
+                <p class="mave">Editor at Global News</p>
+            </div>
+            <div class="slide-box">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'assets/images/home-page/star.png' %}" alt="star">
+                </div>
+                <h2 class="beco">“The real-time analysis and detailed reports from Truth Lens help us ensure our content
+                    is authentic and trustworthy.”</h2>
+                <p class="hoea">Andrew Lewis</p>
+                <p class="mave">Content Creator at MediaWorks</p>
+            </div>
+            <div class="slide-box">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'assets/images/home-page/star.png' %}" alt="star">
+                </div>
+                <h2 class="beco">“Truth Lens is a game-changer for our security team, helping us identify manipulated
+                    images quickly and reliably.”</h2>
+                <p class="hoea">Dan Sawyer</p>
+                <p class="mave">Security Analyst at TechSafe</p>
+            </div>
+            <div class="slide-box">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'assets/images/home-page/star.png' %}" alt="star">
+                </div>
+                <h2 class="beco">“The platform’s ease of use and powerful AI make it an essential tool for anyone
+                    concerned about deepfake images.”</h2>
+                <p class="hoea">Robert Alikson</p>
+                <p class="mave">Journalist at Truth Media</p>
+            </div>
+        </div>
+    </div>
+    <img class="client-img1" src="{% static 'assets/images/home-page/client-img1.jpg' %}" alt="client-img1">
+    <img class="client-img2" src="{% static 'assets/images/home-page/client-img2.jpg' %}" alt="client-img2">
+    <img class="client-img3" src="{% static 'assets/images/home-page/client-img3.jpg' %}" alt="client-img3">
+    <img class="client-img4" src="{% static 'assets/images/home-page/client-img4.jpg' %}" alt="client-img4">
+    <img class="client-img5" src="{% static 'assets/images/home-page/client-img5.jpg' %}" alt="client-img5">
+    <img class="client-img6" src="{% static 'assets/images/home-page/client-img6.jpg' %}" alt="client-img6">
+</section>
+<!-- Section Eight -->
+<section class="section-eight pt-0">
+    <div class="overflow-hidden">
+        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="102" viewBox="0 0 1920 102"
+             fill="none">
+            <path d="M0 101C0 101 423.5 1 960 1C1496.5 1 1920 101 1920 101" stroke="url(#paint0_linear_82_634)"
+                  stroke-width="2"/>
+            <defs>
+                <linearGradient id="paint0_linear_82_634" x1="0" y1="51" x2="1920" y2="51"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0.1" stop-color="#02000B"/>
+                    <stop offset="0.495" stop-color="white"/>
+                    <stop offset="0.9" stop-color="#02000B"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <div class="container">
+        <h2 class="sec-heding">Get A <span>Special Price</span> For Truth Lens</h2>
+        <p class="sub-heding">Choose a plan that fits your needs and start verifying image authenticity today with Truth
+            Lens.</p>
+        <nav class="tabs-btn">
+            <a href="javascript:void(0);" data-tab="one" class="monthly active">Monthly</a>
+            <a href="javascript:void(0);" data-tab="two" class="yearly">Annually</a>
+            <div class="clear"></div>
+        </nav>
+        <div class="tabContainer">
+            <div id="one" class="Tabcondent active">
+                <div class="row team-page-row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price1"></span>
+                                <h2 class="plan-text">FREE</h2>
+                                <h3 class="plan-price">$0 <sub>/Month</sub></h3>
+                                <h3 class="basicLevelPro">Basic level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Image Analysis Limit: 100 per month</li>
+                                <li>Basic Detection Features</li>
+                                <li>Email Support Only</li>
+                                <li>Standard Analysis Reports</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Try For Free
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price2"></span>
+                                <h2 class="plan-text">PREMIUM</h2>
+                                <h3 class="plan-price">$29 <sub>/Month</sub></h3>
+                                <h3 class="basicLevelPro">Professional level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Unlimited Image Analysis</li>
+                                <li>Advanced Detection Features</li>
+                                <li>Priority Email and Live Chat Support</li>
+                                <li>Detailed Analysis Reports</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Get Started
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price3"></span>
+                                <h2 class="plan-text">ENTERPRISE</h2>
+                                <h3 class="plan-price">$49 <sub>/Month</sub></h3>
+                                <h3 class="basicLevelPro">Super level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Unlimited Image Analysis</li>
+                                <li>Custom Detection Solutions</li>
+                                <li>API Access for Integration</li>
+                                <li>24/7 Premium Support</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Get Started
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="two" class="Tabcondent">
+                <div class="row team-page-row">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price4"></span>
+                                <h2 class="plan-text">Gold</h2>
+                                <h3 class="plan-price">$78 <sub>/Annually</sub></h3>
+                                <h3 class="basicLevelPro">Basic level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Image Analysis Limit: 100 per month</li>
+                                <li>Basic Detection Features</li>
+                                <li>Email Support Only</li>
+                                <li>Standard Analysis Reports</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Get Started
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price5"></span>
+                                <h2 class="plan-text">PREMIUM</h2>
+                                <h3 class="plan-price">$89 <sub>/Annually</sub></h3>
+                                <h3 class="basicLevelPro">Professional level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Unlimited Image Analysis</li>
+                                <li>Advanced Detection Features</li>
+                                <li>Priority Email and Live Chat Support</li>
+                                <li>Detailed Analysis Reports</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Get Started
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                        <div class="plan-body">
+                            <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price6"></span>
+                                <h2 class="plan-text">ENTERPRISE</h2>
+                                <h3 class="plan-price">$169 <sub>/Annually</sub></h3>
+                                <h3 class="basicLevelPro">Super level performance</h3>
+                            </div>
+                            <ul>
+                                <li>Unlimited Image Analysis</li>
+                                <li>Custom Detection Solutions</li>
+                                <li>API Access for Integration</li>
+                                <li>24/7 Premium Support</li>
+                            </ul>
+                            <div class="pricing-btn">
+                                <a href="#" class="button"> Get Started
+                                    <span class="hoverEffect">
+                                        <span></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Nine -->
+<section class="section-nine">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-5 col-xl-5 col-lg-5">
+                <h2 class="sec-heding quest"><span> Questions? </span><br> We have Answers</h2>
+                <p class="dui seci">Explore our FAQ section for insights and solutions to common queries about Truth
+                    Lens and deepfake detection.</p>
+            </div>
+            <div class="col-xxl-7 col-xl-7 col-lg-7">
+                <div class="accordion faq" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How can I get started with Truth Lens?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Sign up for a free account, upload an image, and let our AI analyze it for signs of
+                                deepfake manipulation. It’s that simple!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How accurate is Truth Lens at detecting deepfakes?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Truth Lens uses advanced AI models trained on vast datasets to achieve high accuracy in
+                                detecting manipulated images.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Are there any discounts for annual subscriptions?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, our annual plans offer significant savings compared to monthly billing. Check our
+                                pricing section for details.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How can I get technical support if I encounter issues?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Our support team is available via email for free plan users and 24/7 via live chat and
+                                email for premium and enterprise users.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header asd" id="headingFive">
+                            <button class="accordion-button collapsed border-bottom-0 pb-0" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                Is there an API for integration with other platforms?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, our Enterprise plan includes API access for seamless integration with your existing
+                                systems.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tryImage-btn-main grnezQ mb-0">
+                    <a href="faq.html" class="button"> Read More FAQs
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Subscribe -->
+<section class="section-subscribe position-relative">
+    <img class="blurek" src="{% static 'assets/images/home-page/blue-gardient7.png' %}" alt="blue-gardient7">
+    <img class="blurek2" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+    <div class="container position-relative">
+        <img class="robot" src="{% static 'assets/images/home-page/robot.jpg' %}" alt="robot">
+        <video autoplay loop muted class="home-sec-two-video2">
+            <source src="{% static 'assets/video/video2.mp4' %}" type="video/mp4">
+        </video>
+        <div class="cretive-box">
+            <h2 class="sec-heding">Ready to Verify Images with <br><span>Truth Lens?</span></h2>
+            <p class="sub-heding">Sign up today and unlock the power of our AI-driven deepfake detection tools to ensure
+                the authenticity of your images.</p>
+            <div class="community-btn-main mb-0">
+                <a href="feature.html" class="button"> Get Started Now
+                    <span class="hoverEffect">
+                        <span></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="subs-sec" id="subscribe">
+    <div class="container">
+        <div class="row fassd-row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <h2 class="sec-heding quest"><span> Subscribe </span><br> for the Updates!</h2>
+                <p class="dui seci">Stay informed with the latest advancements in deepfake detection and Truth Lens
+                    updates.</p>
+                <div class="sub-scjsd-inp-main">
+                    <input type="text" placeholder="Enter Email Address" name="Enter Email Address"
+                           autocapitalize="off">
+                    <a href="#" class="button subscribeBtn">Subscribe
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+                <div class="footer-checkbox-sec">
+                    <input class="footer-checkbox-input" id="footer-checkbox" type="checkbox">
+                    <label for="footer-checkbox" class="footer-chec-txt">I agree to the
+                        <a href="#">Privacy Policy.</a>
+                    </label>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 faasd">
+                <div class="position-relative">
+                    <img class="fantasy1" src="{% static 'assets/images/home-page/fantasy1.jpg' %}" alt="fantasy1">
+                    <img class="fantasy2" src="{% static 'assets/images/home-page/fantasy2.jpg' %}" alt="fantasy2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section Blog -->
+<section class="section-blog pt-0 position-relative">
+    <img class="blog-gardient" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+    <div class="container">
+        <h2 class="sec-heding">The Latest <span> News & Blog</span></h2>
+        <p class="sub-heding">Stay updated with insights on deepfake detection, AI advancements, and tips for ensuring
+            image authenticity.</p>
+        <div class="row home-blog-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img1.jpg' %}"
+                             alt="blog-img1">
+                        <p class="date-blog">Feb 25, 2025</p>
+                    </div>
+                    <h2 class="eque">Understanding Deepfakes: How AI is Changing Image Authenticity</h2>
+                    <p class="ilisis">Learn about the rise of deepfake technology and how Truth Lens helps detect
+                        manipulated images.</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img2.jpg' %}"
+                             alt="blog-img2">
+                        <p class="date-blog">Feb 20, 2025</p>
+                    </div>
+                    <h2 class="eque">Tips for Identifying Deepfake Images in Media</h2>
+                    <p class="ilisis">Discover practical strategies for spotting deepfakes and how Truth Lens enhances
+                        your verification process.</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="blogDetails.html" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img3.jpg' %}"
+                             alt="blog-img3">
+                        <p class="date-blog">Feb 15, 2025</p>
+                    </div>
+                    <h2 class="eque">The Future of AI in Combating Deepfakes</h2>
+                    <p class="ilisis">Explore how AI-driven tools like Truth Lens are shaping the fight against digital
+                        misinformation.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="position-relative footer-main">
+    <img class="footer-logo" src="{% static 'assets/images/home-page/footer-logo.png' %}" alt="footer-logo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-5 footer-col-fir">
+                <svg class="djks" xmlns="http://www.w3.org/2000/svg" width="2" height="100" viewBox="0 0 2 100"
+                     fill="none">
+                    <path d="M1 0L0.999996 100" stroke="url(#paint0_linear_137_269)" stroke-width="2"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_137_269" x1="1.5" y1="2.18557e-08" x2="1.5" y2="100"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1A1A1A" offset="0"/>
+                            <stop offset="0.5" stop-color="#00FFB1"/>
+                            <stop offset="1" stop-color="#1A1A1A"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h2 class="sec-heding advice">Expert Deepfake Detection with <span>Truth Lens?</span></h2>
+                <p class="dui seci dsos">Trust Truth Lens to provide accurate and reliable tools for identifying
+                    manipulated images, protecting your content and reputation.</p>
+                <div class="ref-demo">
+                    <a href="feature.html" class="button"> Request Demo
+                        <span class="hoverEffect">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-7 footer-col-sec">
+                <img class="footer-gefdo" src="{% static 'assets/images/home-page/blue-gardient2.png' %}"
+                     alt="blue-gardient2">
+                <div class="box-footer">
+                    <p class="resour">Resources</p>
+                    <ul class="foot-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li class="mb-0"><a href="#">Request API Access</a></li>
+                    </ul>
+                </div>
+                <div class="box-footer">
+                    <p class="resour">Quick Links</p>
+                    <ul class="foot-links">
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Login</a></li>
+                        <li><a href="javascript:void(0);" data-bs-toggle="modal"
+                               data-bs-target="#exampleModal">Register</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li class="mb-0"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="coprights-main">
+        <svg class="das" xmlns="http://www.w3.org/2000/svg" width="100" height="2" viewBox="0 0 100 2" fill="none">
+            <path d="M100 1L8.49366e-07 0.999996" stroke="url(#paint0_linear_137_271)" stroke-width="2"/>
+            <defs>
+                <linearGradient id="paint0_linear_137_271" x1="100" y1="1.5" x2="-2.18557e-08" y2="1.5"
+                                gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1A1A1A" offset="0"/>
+                    <stop offset="0.5" stop-color="#5C33FF"/>
+                    <stop offset="1" stop-color="#1A1A1A"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="container">
+            <div class="rights-reserved">
+                <h2>© 2025 - All rights reserved by
+                    <a href="https://1.envato.market/website-portfolio" target="_blank"> Dev.</a>
+                </h2>
+                <div class="footer-media">
+                    <a href="https://www.facebook.com/"><img src="{% static 'assets/images/svg/facebook.svg' %}"
+                                                             alt="facebook">Facebook</a>
+                    <a href="https://www.instagram.com/"><img src="{% static 'assets/images/svg/insta.svg' %}"
+                                                              alt="insta">Instagram</a>
+                    <a href="https://x.com/"><img src="{% static 'assets/images/svg/twitter.svg' %}" alt="twitter">Twitter</a>
+                    <a href="https://www.linkedin.com/"><img src="{% static 'assets/images/svg/linkedin.svg' %}"
+                                                             alt="linkedin">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Login Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body form-modal-body">
+                <button type="button" class="btn-close form-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                <div class="container-demo">
+
+                    <!-- LOGIN FORM -->
+                    <div class="user signinBx">
+                        <div class="imgBx">
+                            <img src="{% static 'assets/images/home-page/form-img1.jpg' %}" alt="form-img1">
+                        </div>
+                        <div class="formBx">
+                            <form method="POST" action="{% url 'website:login' %}">
+                                {% csrf_token %}
+                                <h2>Sign In</h2>
+                                <input type="email" name="email" placeholder="Email Address" required
+                                       autocomplete="off">
+                                <input type="password" name="password" placeholder="Password" required
+                                       autocomplete="off">
+                                <button type="submit" class="button subscribeBtn">
+                                    Login
+                                    <span class="hoverEffect"><span></span></span>
+                                </button>
+                                <p class="signup">
+                                    Don't have an account?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign Up</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- SIGNUP FORM -->
+                    <div class="user signupBx">
+                        <div class="formBx">
+                            <form method="POST" action="{% url 'website:signup' %}">
+                                {% csrf_token %}
+                                <h2>Create an account</h2>
+                                <input type="text" name="username" placeholder="Username" required autocomplete="off">
+                                <input type="email" name="email" placeholder="Email Address" required
+                                       autocomplete="off">
+                                <input type="password" name="password" placeholder="Create Password" required
+                                       autocomplete="off">
+                                <input type="password" name="confirm_password" placeholder="Confirm Password" required
+                                       autocomplete="off">
+                                <button type="submit" class="button subscribeBtn">
+                                    Sign Up
+                                    <span class="hoverEffect"><span></span></span>
+                                </button>
+                                <p class="signup">
+                                    Already have an account?
+                                    <a href="javascript:void(0);" onclick="toggleForm();">Sign in</a>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="imgBx">
+                            <img src="{% static 'assets/images/home-page/form-img2.jpg' %}" alt="form-img2">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bottom to Top Button -->
+<button class="bottom-top-button">↑</button>
+<!-- Scripts -->
+<script src="{% static 'assets/javascript/jquery.js' %}"></script>
+<script src="{% static 'assets/javascript/smooth-scroll.js' %}"></script>
+<script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+<script src="{% static 'assets/javascript/script.js' %}"></script>
+</body>
+</html>
