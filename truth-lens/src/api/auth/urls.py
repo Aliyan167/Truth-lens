@@ -3,9 +3,11 @@ from django.urls import path, re_path, include
 from dj_rest_auth.views import (
     LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView,
 )
+
+from . import views
 from .views import (
     UserRetrieveChangeAPIView, CustomLoginView, DeactivateUserAPIView, DeleteUserAPIView, GoogleLogin, GoogleConnect,
-    AppleLogin, AppleConnect, ImagePredictionAPIView
+    AppleLogin, AppleConnect, ImagePredictionAPIView, CustomGoogleLogin, ProfileView
 )
 
 app_name = 'auth'
@@ -30,4 +32,8 @@ urlpatterns += [
     path('google-connect/', GoogleConnect.as_view(), name='google_connect'),
     path('apple/', AppleLogin.as_view(), name='apple_login'),
     path('apple-connect/', AppleConnect.as_view(), name='apple_connect'),
+    path('custom-google/', CustomGoogleLogin.as_view(), name='custom_google_login'),
+    path('profile/', ProfileView.as_view(), name='profile'),
+
+
 ]

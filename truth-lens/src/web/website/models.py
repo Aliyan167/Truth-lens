@@ -3,6 +3,7 @@ from django.conf import settings
 
 
 class ImageUpload(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
     image = models.ImageField(upload_to='uploads/')
     prediction = models.CharField(
         max_length=10,
@@ -10,6 +11,7 @@ class ImageUpload(models.Model):
         blank=True,
         null=True
     )
+    score = models.FloatField(blank=True, null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
