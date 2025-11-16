@@ -1,2 +1,1 @@
-﻿# bikram-company
 
