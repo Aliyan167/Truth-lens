@@ -5,6 +5,7 @@ from dj_rest_auth.serializers import LoginSerializer
 from dj_rest_auth.views import LoginView
 from django.contrib.auth import authenticate
 from rest_framework import permissions, status
+from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.models import Token
 from rest_framework.generics import RetrieveUpdateAPIView
 from src.ml_model.detect import predict_image
@@ -206,13 +207,16 @@ from src.api.auth.serializer import UserSerializer
 
 
 class ProfileView(APIView):
+    # Accept both session and token authentication
+    authentication_classes = [SessionAuthentication, TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
         serializer = UserSerializer(request.user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def post(self, request):
+    def put(self, request):
+        # Use PUT instead of POST for updating user
         serializer = UserSerializer(request.user, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()

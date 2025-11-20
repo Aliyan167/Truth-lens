@@ -32,7 +32,7 @@ urlpatterns += [
     path('google-connect/', GoogleConnect.as_view(), name='google_connect'),
     path('apple/', AppleLogin.as_view(), name='apple_login'),
     path('apple-connect/', AppleConnect.as_view(), name='apple_connect'),
-    path('custom-google/', CustomGoogleLogin.as_view(), name='custom_google_login'),
+    path('user-name/', CustomGoogleLogin.as_view(), name='custom_google_login'),
     path('profile/', ProfileView.as_view(), name='profile'),
 
 
