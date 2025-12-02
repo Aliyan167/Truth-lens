@@ -3,11 +3,11 @@ from django.urls import path, re_path, include
 from dj_rest_auth.views import (
     LogoutView, PasswordChangeView, PasswordResetView, PasswordResetConfirmView,
 )
-
 from . import views
 from .views import (
     UserRetrieveChangeAPIView, CustomLoginView, DeactivateUserAPIView, DeleteUserAPIView, GoogleLogin, GoogleConnect,
-    AppleLogin, AppleConnect, ImagePredictionAPIView, CustomGoogleLogin, ProfileView
+    AppleLogin, AppleConnect, ImagePredictionAPIView, CustomGoogleLogin, ProfileView, ScannedDataView,
+    VideoPredictionAPIView
 )
 
 app_name = 'auth'
@@ -25,7 +25,6 @@ urlpatterns = [
 
 ]
 
-#  Social Auth
 urlpatterns += [
 
     path('google/', GoogleLogin.as_view(), name='google_login'),
@@ -34,6 +33,7 @@ urlpatterns += [
     path('apple-connect/', AppleConnect.as_view(), name='apple_connect'),
     path('user-name/', CustomGoogleLogin.as_view(), name='custom_google_login'),
     path('profile/', ProfileView.as_view(), name='profile'),
-
+    path('scanned-data/', ScannedDataView.as_view(), name='scanned-data'),
+    path("detect-video/", VideoPredictionAPIView.as_view(), name="detect-video"),
 
 ]

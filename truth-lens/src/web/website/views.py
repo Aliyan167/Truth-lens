@@ -182,7 +182,7 @@ def upload_video_view(request):
             #     instance.save()
             if len(frames) == 8:
                 label, score = detect_adapter.classify_video_segment(frames)
-                instance.prediction = f"{label.title()} ({score:.3f})"
+                instance.prediction = f"{label.title()} ({score * 100:.1f}%)"
                 instance.save()
             else:
                 instance.prediction = "Could not extract enough frames"

@@ -27,3 +27,24 @@ class ImageUploadSerializer(serializers.ModelSerializer):
         model = ImageUpload
         fields = ['id', 'image', 'prediction', 'score', 'uploaded_at']
         read_only_fields = ['id', 'prediction', 'score', 'uploaded_at']
+
+
+from rest_framework import serializers
+from src.web.website.models import ImageUpload,VideoUpload
+
+
+class ImageResultSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ImageUpload
+        fields = ['id', 'prediction', 'score', 'uploaded_at']
+
+
+# video_detection/serializers.py
+from rest_framework import serializers
+
+
+class VideoUploadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VideoUpload
+        fields = ['id', 'user', 'video', 'prediction', 'created_at']
+        read_only_fields = ['id', 'user', 'prediction', 'created_at']

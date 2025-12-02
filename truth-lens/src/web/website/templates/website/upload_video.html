@@ -101,9 +101,17 @@
                                 {% if score is not None %}
                                     <br>
                                     <span style="font-size: 1.2rem;">
-                    Confidence Score: {{ score|floatformat:4 }}
-                </span>
+
+        {% if score < 0.01 %}
+            {% widthratio score 1 10000 as percent %}
+        {% else %}
+            {% widthratio score 1 100 as percent %}
+        {% endif %}
+
+                                        Confidence Score: {{ percent|floatformat:"g" }}%
+    </span>
                                 {% endif %}
+
                             </div>
                         {% endif %}
                         <div class="text-center mb-3">

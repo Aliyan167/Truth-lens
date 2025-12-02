@@ -18,7 +18,7 @@
 <header id="top-navbar" class="top-navbar">
     <div class="container">
         <nav>
-            <a href="feature.html" class="logo">
+            <a href="{% url 'website:home' %}" class="logo">
                 <img src="{% static 'assets/images/svg/favicon.svg' %}" alt="logo">
             </a>
             <div class="menu-icon" onclick="toggleMenu()">
@@ -27,7 +27,7 @@
             <div class="nav-links-mn">
                 <ul class="nav-links">
                     <li class="d-flex justify-content-center">
-                        <a href="feature.html" class="side-menu-logo">
+                        <a href="{% url 'website:home' %}" class="side-menu-logo">
                             <img src="{% static 'assets/images/svg/logo.svg' %}" alt="logo">
                         </a>
                     </li>
@@ -68,16 +68,8 @@
     <div class="container">
         <p class="elevate">Uncover the Truth with</p>
         <h1 class="bestAI">Truth Lens Deepfake Detector</h1>
-        <p class="olut">Your One-Stop Solution for Detecting Deepfake Images with Advanced AI Technology.</p>
-        <div class="inputGenerate">
-            <input type="text" placeholder="Upload an image to analyze for deepfake detection" name="Analyze"
-                   autocomplete="off">
-            <a href="#" class="button generate-btn">Analyze Image
-                <span class="hoverEffect">
-                    <span></span>
-                </span>
-            </a>
-        </div>
+        <p class="olut">Your One-Stop Solution for Detecting Deepfake Images with Advanced AI .</p>
+        <br></br>
         <div class="hometags-main">
             <p class="popTg">Key Features:</p>
             <a href="#" class="hometags">Deepfake Detection</a>

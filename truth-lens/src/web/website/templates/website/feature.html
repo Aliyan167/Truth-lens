@@ -77,20 +77,26 @@
                     <span class="img-bg-circle"></span>
                 </div>
                 <div class="card shadow p-4">
-                        {% if image %}
-                            {% if image.prediction %}
-                                <div class="alert-result {% if image.prediction == 'real' %}alert-real{% else %}alert-fake{% endif %} text-center"
-                                     style="color: white; font-size: 1.5em;">
-                                    <strong>Prediction Result:</strong> {{ image.prediction|capfirst }}
+                    {% if image %}
+                        {% if image.prediction %}
+                            <div class="alert-result {% if image.prediction == 'real' %}alert-real{% else %}alert-fake{% endif %} text-center"
+                                 style="color: white; font-size: 1.5em;">
+                                <strong>Prediction Result:</strong> {{ image.prediction|capfirst }}
 
-                                    {% if score is not None %}
-                                        <br>
-                                        <span style="font-size: 1.2rem;">
-                        Confidence Score: {{ score|floatformat:4 }}
+                                {% if score is not None %}
+                                    <br>
+                                    <span style="font-size: 1.2rem;">
+              {% if score < 0.01 %}
+                  {% widthratio score 1 10000 as percent %}
+              {% else %}
+                  {% widthratio score 1 100 as percent %}
+              {% endif %}
+
+                                        Confidence Score: {{ percent|floatformat:"g" }}%
                     </span>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
+                                {% endif %}
+                            </div>
+                        {% endif %}
 
                         <div class="text-center mb-3 image-container">
                             <img src="{{ image.image.url }}" class="img-fluid rounded" alt="Uploaded Image">

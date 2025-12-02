@@ -28,6 +28,7 @@ class VideoUpload(models.Model):
         null=True
     )
     created_at = models.DateTimeField(auto_now_add=True)
+    score = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return f"VideoUpload({self.pk})"

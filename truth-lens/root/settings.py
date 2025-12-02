@@ -247,3 +247,14 @@ DEFAULT_FROM_EMAIL = 'exarth@info.com'  # Replace with the email address to appe
 
 """  ACCOUNT ADAPTER Modify Login/Signup Redirect UR----------------------------------------------------"""
 ACCOUNT_ADAPTER = "src.services.accounts.adapters.MyAccountAdapter"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # For Flutter mobile apps
+        # Optional: JWT auth if you want to support JWT tokens as well
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
