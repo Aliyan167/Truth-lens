@@ -15,36 +15,38 @@ Using advanced deep-learning models, the system identifies deepfakes, manipulate
 
 ⚡ Fast Predictions with confidence scores
 
-🎥 Support for video frame extraction and analysis
+🎥 Video frame extraction and analysis
 
-🔐 Secure Upload Handling
+🔐 Secure upload handling
 
-📡 REST API for external integrations
+📡 REST API for integrations
 
-💾 History & Result Logs (if implemented in your version)
+💾 History & results logs (if implemented)
 
 🧰 Tech Stack
 Backend / AI
 
 Python
 
-Django / Flask (depending on your backend)
+Django 
 
-TensorFlow / PyTorch deepfake detection models
+TensorFlow / PyTorch
 
-OpenCV for video and image processing
+OpenCV
 
 Frontend
 
 HTML, CSS, JavaScript
 
-(Optional) React / Next.js
 
-Mobile App (React Native / Flutter if used)
+
+Mobile
+
+ Flutter
 
 Database
 
-PostgreSQL / MySQL / SQLite
+ SQLite
 
 📸 How It Works
 
@@ -52,23 +54,26 @@ User uploads an image or video
 
 The system preprocesses the media
 
-AI model runs authenticity analysis
+The AI model analyzes frames, textures, artifacts, and patterns
 
 The platform returns:
 
-Real / Fake prediction
+✅ Real / Fake prediction
 
-Confidence score
+📊 Confidence score
 
-Optional: heatmaps / face detection info
+🔥 Optional: heatmaps or detected faces
 
-Results displayed instantly on the dashboard
+Results are displayed instantly on the dashboard
 
 📦 Installation (Backend)
 git clone https://github.com/<your-username>/Truth-lens.git
 cd Truth-lens
+
 python -m venv venv
-source venv/bin/activate     # Windows: venv\Scripts\activate
+source venv/bin/activate       # Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
+
 python manage.py migrate
 python manage.py runserver
